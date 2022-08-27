@@ -15,5 +15,7 @@ from .sngan_g_model import SNGANGModel
 from .vae_e_model import VAEEModel
 from .vae_d_model import VAEDModel
 
+from .jungan_d_model import JUNGANDModel
+
 x_size: int = None
 z_size: int = 128

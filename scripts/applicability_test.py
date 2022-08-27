@@ -1,4 +1,7 @@
 import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 import pandas as pd
 import numpy as np
@@ -26,7 +29,7 @@ METRICS = [
 ]
 
 
-def highlight_higher_cells(s: pd.Series) -> list[str]:
+def highlight_higher_cells(s: pd.Series):
     result_ = []
     for i_1, i_2 in zip(s[0::2], s[1::2]):
         if i_1 > i_2:
@@ -90,7 +93,7 @@ if __name__ == '__main__':
                     temp_result[metric_name][GAN.__name__].append(gan_classifier.metrics[metric_name])
                 # test RGAN
                 src.utils.set_random_state()
-                rgan_dataset = src.utils.get_rgan_dataset(RGAN())
+                rgan_dataset = src.utils.get_jgan_dataset(RGAN())
                 rgan_classifier = src.tr_ada_boost.TrAdaBoost()
                 rgan_classifier.fit(rgan_dataset, training_dataset)
                 rgan_classifier.test(test_dataset)

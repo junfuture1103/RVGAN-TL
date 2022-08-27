@@ -20,50 +20,61 @@ if __name__ == '__main__':
     X_train_resampled, Y_train_resampled = smote.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
     print("============ DONE SMOTE ============")
 
-    rgan_dataset = src.utils.get_jgan_dataset(src.gans.GAN())
-    rvsngan_dataset = src.utils.get_jgan_dataset(src.gans.RVSNGAN())
+    gan_dataset = src.utils.get_gan_dataset(src.gans.GAN())
+    wgan_dataset = src.utils.get_gan_dataset(src.gans.WGAN())
+    wgangp_dataset = src.utils.get_gan_dataset(src.gans.WGANGP())
+    sngan_dataset = src.utils.get_gan_dataset(src.gans.SNGAN())
 
-    # src.classifier.Classifier(gan_dataset)
-    # print("============ RF ============")
-    # src.jun_classifier.RandomForest(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
+    jungan_dataset = src.utils.get_jgan_dataset(src.gans.JUNGAN())
+
+    # rvgan_dataset = src.utils.get_jgan_dataset(src.gans.RVGAN())
+    # rvwgan_dataset = src.utils.get_jgan_dataset(src.gans.RVWGAN())
+    # rvwgangp_dataset = src.utils.get_jgan_dataset(src.gans.RVWGANGP())
+    rvsngan_dataset = src.utils.get_jgan_dataset(src.gans.RVSNGAN())
     
-    # print("============ LGBM ============")
-    # src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
+    ############ GAN ############
+    print("============ RF ============")
+    src.jun_classifier.RandomForest(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
     
-    # print("============ RF with RGAN ============")
-    # src.jun_classifier.RandomForest(rgan_dataset.samples, rgan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+    print("============ LGBM ============")
+    src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ RF with SMOTE ============")
+    src.jun_classifier.RandomForest(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+
+    print("============ LGBM with SMOTE ============")
+    src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+    
+    ############ GAN ############
+    print("============ LGBM with GAN ============")
+    src.jun_classifier.LGBM(gan_dataset.samples, gan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ LGBM with WGAN ============")
+    src.jun_classifier.LGBM(wgan_dataset.samples, wgan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ LGBM with WGANGP ============")
+    src.jun_classifier.LGBM(wgangp_dataset.samples, wgangp_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ LGBM with SNGANs ============")
+    src.jun_classifier.LGBM(sngan_dataset.samples, sngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+
+    # ############ RVGAN ############
+    print("============ LGBM with JUNGAN ============")
+    src.jun_classifier.LGBM(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+
+    print("============ LGBM with SNGANs ============")
+    src.jun_classifier.LGBM(rvsngan_dataset.samples, rvsngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+
+    # lgbm_classifier = src.lgbm.LGBM()
+    # lgbm_classifier.fit(rgan_dataset)
+    # lgbm_classifier.test(test_dataset)
     
     # print("============ LGBM with RGAN ============")
-    # src.jun_classifier.LGBM(rgan_dataset.samples, rgan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-   
-    # print("============ RF with RVSNGAN ============")
-    # src.jun_classifier.RandomForest(rvsngan_dataset.samples, rvsngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # print("============ LGBM with RVSNGAN ============")
-    # src.jun_classifier.LGBM(rvsngan_dataset.samples, rvsngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-
-    # print("============ RF with SMOTE ============")
-    # src.jun_classifier.RandomForest(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
-
-    # print("============ LGBM with SMOTE ============")
-    # src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
-
-    # print("============ LGBM with SMOTE ============")
-    # src.regression.LGBM(X_train_resampled, y_train_resampled, test_samples, test_labels)
-
-    # tl_classifier = src.tr_ada_boost.TrAdaBoost()
-    # tl_classifier.fit(rgan_dataset, full_dataset)
-    # tl_classifier.test(test_dataset)
-    print("============ RF with RGAN ============")
-    lgbm_classifier = src.lgbm.LGBM()
-    lgbm_classifier.fit(rgan_dataset)
-    lgbm_classifier.test(test_dataset)
-
-    # for name, value in tl_classifier.metrics.items():
+    # for name, value in lgbm_classifier.metrics.items():
     #     print(f'{name:<15}:{value:>10.4f}')
 
-    # print('Started testing Original Classifier')
-    # original_classifier = src.classifier.Classifier('Original')
-    # original_classifier.fit(full_dataset)
-    # for name, value in original_classifier.metrics.items():
-    #     print(f'{name:<15}:{value:>10.4f}')
+    print('Started testing Original Classifier')
+    original_classifier = src.classifier.Classifier('Original')
+    original_classifier.fit(full_dataset)
+    for name, value in original_classifier.metrics.items():
+        print(f'{name:<15}:{value:>10.4f}')
