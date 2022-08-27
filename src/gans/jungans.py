@@ -2,14 +2,14 @@ import torch
 
 import src
 from src import config, models
-from src.models import SNGANGModel, SNGANDModel
+from src.models import SNGANGModel, JUNGANSDModel
 from src.datasets import PositiveDataset, RoulettePositiveDataset
 from ._base import Base
 
 
-class RVSNGAN(Base):
+class JUNGANS(Base):
     def __init__(self):
-        super().__init__(SNGANGModel(), SNGANDModel())
+        super().__init__(SNGANGModel(), JUNGANSDModel())
 
     def _fit(self):
         d_optimizer = torch.optim.Adam(
@@ -24,7 +24,6 @@ class RVSNGAN(Base):
         )
 
         x = RoulettePositiveDataset().get_roulette_samples(len(PositiveDataset())).to(config.device)
-        
         for _ in range(config.gan.epochs):
             for __ in range(config.gan.d_loops):
                 self.d.zero_grad()

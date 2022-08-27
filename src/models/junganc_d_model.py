@@ -4,16 +4,16 @@ from torch.nn.utils.parametrizations import spectral_norm
 
 import src
 
-class JUNGANDModel(nn.Module):
+class JUNGANCDModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.step_1 = nn.Sequential(
             spectral_norm(nn.Linear(src.models.x_size, 512)),
-            nn.SELU(),
+            nn.CELU(),
             spectral_norm(nn.Linear(512, 128)),
             nn.CELU(),
             spectral_norm(nn.Linear(128, 32)),
-            nn.SELU(),
+            nn.CELU(),
             spectral_norm(nn.Linear(32, 8)),
             nn.CELU(),
         )

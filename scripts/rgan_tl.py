@@ -26,10 +26,8 @@ if __name__ == '__main__':
     sngan_dataset = src.utils.get_gan_dataset(src.gans.SNGAN())
 
     jungan_dataset = src.utils.get_jgan_dataset(src.gans.JUNGAN())
-
-    # rvgan_dataset = src.utils.get_jgan_dataset(src.gans.RVGAN())
-    # rvwgan_dataset = src.utils.get_jgan_dataset(src.gans.RVWGAN())
-    # rvwgangp_dataset = src.utils.get_jgan_dataset(src.gans.RVWGANGP())
+    jungans_dataset = src.utils.get_jgan_dataset(src.gans.JUNGANS())
+    junganc_dataset = src.utils.get_jgan_dataset(src.gans.JUNGANC())
     rvsngan_dataset = src.utils.get_jgan_dataset(src.gans.RVSNGAN())
     
     ############ GAN ############
@@ -58,11 +56,17 @@ if __name__ == '__main__':
     print("============ LGBM with SNGANs ============")
     src.jun_classifier.LGBM(sngan_dataset.samples, sngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
 
-    # ############ RVGAN ############
+    ############ JUNGAN ############
     print("============ LGBM with JUNGAN ============")
     src.jun_classifier.LGBM(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
 
-    print("============ LGBM with SNGANs ============")
+    print("============ LGBM with JUNGANS ============")
+    src.jun_classifier.LGBM(jungans_dataset.samples, jungans_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ LGBM with JUNGANC ============")
+    src.jun_classifier.LGBM(junganc_dataset.samples, junganc_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ LGBM with RVSNGANs ============")
     src.jun_classifier.LGBM(rvsngan_dataset.samples, rvsngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
 
     # lgbm_classifier = src.lgbm.LGBM()
@@ -73,8 +77,8 @@ if __name__ == '__main__':
     # for name, value in lgbm_classifier.metrics.items():
     #     print(f'{name:<15}:{value:>10.4f}')
 
-    print('Started testing Original Classifier')
-    original_classifier = src.classifier.Classifier('Original')
-    original_classifier.fit(full_dataset)
-    for name, value in original_classifier.metrics.items():
-        print(f'{name:<15}:{value:>10.4f}')
+    # print('Started testing Original Classifier')
+    # original_classifier = src.classifier.Classifier('Original')
+    # original_classifier.fit(full_dataset)
+    # for name, value in original_classifier.metrics.items():
+    #     print(f'{name:<15}:{value:>10.4f}')

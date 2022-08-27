@@ -18,14 +18,20 @@ PAIRS = [
     (src.gans.WGAN, src.gans.RVWGAN),
     (src.gans.WGANGP, src.gans.RVWGANGP),
     (src.gans.SNGAN, src.gans.RVSNGAN),
+    (src.gans.SNGAN, src.gans.JUNGAN),
+    (src.gans.SNGAN, src.gans.JUNGANS),
+    (src.gans.SNGAN, src.gans.JUNGANC),
 ]
 
-K = 5
+K = 10
 
 METRICS = [
+    'Accuracy',
+    'Precision',
+    'Recall',
     'F1',
-    'AUC',
     'G-Mean',
+    'AUC',
 ]
 
 
@@ -75,7 +81,12 @@ if __name__ == '__main__':
             } for k in METRICS
         }
         # k-fold test
+        k_num = 0
         for training_indices, test_indices in skf.split(samples, labels):
+            print("===== K_NUM {} =====".format(k_num))
+            print("len train",len(training_indices))
+            print("len test",len(test_indices))
+
             src.datasets.training_samples = samples[training_indices]
             src.datasets.training_labels = labels[training_indices]
             src.datasets.test_samples = samples[test_indices]
@@ -94,8 +105,8 @@ if __name__ == '__main__':
                 # test RGAN
                 src.utils.set_random_state()
                 rgan_dataset = src.utils.get_jgan_dataset(RGAN())
-                rgan_classifier = src.tr_ada_boost.TrAdaBoost()
-                rgan_classifier.fit(rgan_dataset, training_dataset)
+                rgan_classifier = src.lgbm.LGBM()
+                rgan_classifier.fit(rgan_dataset)
                 rgan_classifier.test(test_dataset)
                 for metric_name in METRICS:
                     temp_result[metric_name][RGAN.__name__].append(rgan_classifier.metrics[metric_name])
@@ -111,5 +122,6 @@ if __name__ == '__main__':
             with pd.ExcelWriter(result_file) as writer:
                 for metric_name in METRICS:
                     df = result[metric_name]
+                    print(df)
                     df.to_excel(writer, metric_name)
-                    df.style.apply(highlight_higher_cells, axis=1).to_excel(writer, metric_name, float_format='%.4f')
+                    # df.style.apply(highlight_higher_cells, axis=1).to_excel(writer, metric_name, float_format='%.4f')

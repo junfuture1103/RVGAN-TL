@@ -17,6 +17,9 @@ class Classifier:
         self.model = DecisionTreeClassifier(max_depth=5)
         self.logger = logger.Logger(name)
         self.metrics = {
+            'Accuracy': .0,
+            'Precision': .0,
+            'Recall': .0,
             'F1': .0,
             'G-Mean': .0,
             'AUC': .0,

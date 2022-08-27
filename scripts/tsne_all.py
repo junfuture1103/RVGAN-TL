@@ -23,10 +23,8 @@ GAN_MODELS = [
     src.gans.WGAN,
     src.gans.WGANGP,
     src.gans.SNGAN,
-    src.gans.RVGAN,
-    src.gans.RVWGAN,
-    src.gans.RVWGANGP,
     src.gans.RVSNGAN,
+    src.gans.JUNGAN,
 ]
 
 if __name__ == '__main__':
@@ -40,6 +38,7 @@ if __name__ == '__main__':
     raw_y = raw_y.numpy()
 
     for M in TRADITIONAL_METHODS:
+        print("== START {} ==".format(M.__name__))
         x, _ = M(random_state=src.config.seed).fit_resample(raw_x, raw_y)
         y = np.concatenate([raw_y, np.full(len(x) - len(raw_x), 2)])
         embedded_x = TSNE(
@@ -50,6 +49,7 @@ if __name__ == '__main__':
         result[M.__name__] = [embedded_x, y]
 
     for M in GAN_MODELS:
+        print("== START {} ==".format(M.__name__))
         src.utils.set_random_state()
         gan = M()
         gan.fit()
@@ -93,14 +93,14 @@ if __name__ == '__main__':
             x=generated_data[:, 0],
             y=generated_data[:, 1],
             ax=axe,
-            alpha=0.5,
+            alpha=1.0,
             label='generated_data',
         )
         sns.scatterplot(
             x=minority[:, 0],
             y=minority[:, 1],
             ax=axe,
-            alpha=1.0,
+            alpha=0.6,
             s=10,
             label='minority',
         )
@@ -112,5 +112,5 @@ if __name__ == '__main__':
 
     plt.savefig(src.config.path.test_results / 'all_distribution.jpg')
     plt.savefig(src.config.path.test_results / "shap2.pdf", format='pdf', dpi=1000, bbox_inches='tight')
-    
+
     plt.show()

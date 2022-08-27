@@ -9,5 +9,7 @@ from .rv_wgangp import RVWGANGP
 from .rv_sngan import RVSNGAN
 
 from .jungan import JUNGAN
+from .jungans import JUNGANS
+from .junganc import JUNGANC
 
 from ._base import Base as GANLike
