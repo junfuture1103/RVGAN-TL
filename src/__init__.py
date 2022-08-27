@@ -8,4 +8,5 @@ from . import (
     tr_ada_boost,
     utils,
     vae,
+    jun_classifier,
 )

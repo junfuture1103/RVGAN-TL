@@ -33,39 +33,31 @@ def set_random_state(seed: int = None) -> None:
     torch.backends.cudnn.deterministic = True
 
 
-def preprocess_data(file_name: str) -> (np.ndarray, np.ndarray):
+def preprocess_data(file_name):
     set_random_state()
-    # concatenate the file path
     file_path = src.config.path.datasets / file_name
-    # calculate skip rows
-    skip_rows = 0
-    with open(file_path, 'r') as f:
-        while True:
-            line = f.readline()
-            if line[0] != '@':
-                break
-            else:
-                skip_rows += 1
-    # read raw data
-    df = pd.read_csv(file_path, sep=',', skiprows=skip_rows, header=None)
-    np_array = df.to_numpy()
-    np.random.shuffle(np_array)
-    # partition labels and samples
-    labels = np_array[:, -1].copy()
-    samples = np_array[:, :-1].copy()
-    # digitize labels
-    for i, _ in enumerate(labels):
-        labels[i] = labels[i].strip()
-    labels[labels[:] == 'positive'] = 1
-    labels[labels[:] == 'negative'] = 0
-    labels = labels.astype('int')
-    # normalize samples
+    df = pd.read_csv(file_path)
+    df.columns
+
+    # src.utils.set_random_state()
+    # src.utils.prepare_dataset(FILE_NAME)
+
+    # #random sampling
+    df = df.sample(frac=1)
+    print('=== STRAT PREPROCESS_DATA ===')
+    samples = df.loc[:, 'V1' : 'Amount']
+    labels = df.loc[:, 'Class']
+
+    # normalize samples -> min : 0 max : 1
     samples = minmax_scale(samples.astype('float32'))
+    labels = labels.astype('int')
+
     src.models.x_size = samples.shape[1]
-    return samples, labels
+
+    return samples, np.array(labels)
 
 
-def prepare_dataset(name: str, training_test_ratio: float = 0.8) -> None:
+def prepare_dataset(name, training_test_ratio: float = 0.8) -> None:
     samples, labels = preprocess_data(name)
     training_samples, test_samples, training_labels, test_labels = train_test_split(
         samples,
