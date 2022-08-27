@@ -10,4 +10,5 @@ from . import (
     vae,
     jun_classifier,
     sample,
+    lgbm,
 )
