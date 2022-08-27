@@ -1,6 +1,7 @@
 import random
 
 import torch
+import time
 import numpy as np
 import pandas as pd
 from torch import nn
@@ -138,25 +139,33 @@ def get_rgan_dataset(rgan: src.gans.GANLike) -> src.datasets.FullDataset:
 
     # count negative samples in the overlapping area
     ol_neg_cnt = 0
+    iter_count = 0
     for i in neg_dataset.samples:
+        print("count neg samples in overlapping area : {}/{}".format(iter_count, len(neg_dataset.samples)))
         indices = get_knn_indices(i, full_dataset.samples)
         labels = full_dataset.labels[indices]
         if 1 in labels:
             ol_neg_cnt += 1
+        iter_count += 1
 
     # count positive samples in the overlapping area
     ol_pos_cnt = 0
+    iter_count = 0
     for i in pos_dataset.samples:
+        print("count pos samples in overlapping area : {}/{}".format(iter_count, len(neg_dataset.samples)))
         indices = get_knn_indices(i, full_dataset.samples)
         labels = full_dataset.labels[indices]
         if 0 in labels:
             ol_pos_cnt += 1
+        iter_count += 1
 
     target_dataset = src.datasets.FullDataset().to(src.config.device)
     # generate positive samples until reaching balance
     total_pos_cnt = len(pos_dataset)
     total_neg_cnt = len(neg_dataset)
+
     while True:
+        start_time = time.time()
         if total_pos_cnt >= total_neg_cnt or ol_pos_cnt >= ol_neg_cnt:
             break
         else:
@@ -182,6 +191,17 @@ def get_rgan_dataset(rgan: src.gans.GANLike) -> src.datasets.FullDataset:
             labels = full_dataset.labels[indices]
             if 0 in labels:
                 ol_pos_cnt += 1
+        
+        end_time = time.time()
+        
+        print("update the number of positive samples")
+        print("total_post_cnt : {}".format(total_pos_cnt))
+        print("total_neg_cnt : {}".format(total_neg_cnt))
+        print("ol_pos_cnt : {}".format(ol_pos_cnt))
+        print("ol_neg_cnt : {}".format(ol_neg_cnt))
+        print("TIME : {}".format(end_time-start_time))
+
     target_dataset.samples = target_dataset.samples.detach()
     target_dataset.labels = target_dataset.labels.detach()
+
     return target_dataset

@@ -18,7 +18,7 @@ if __name__ == '__main__':
     smote = SMOTE(random_state=42)
     X_train_resampled, Y_train_resampled = smote.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
     
-    # rgan_dataset = src.utils.get_rgan_dataset(src.gans.RVGAN())
+    rgan_dataset = src.utils.get_rgan_dataset(src.gans.RVGAN())
 
     # src.classifier.Classifier(gan_dataset)
     print("============ RF ============")
