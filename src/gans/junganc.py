@@ -23,7 +23,9 @@ class JUNGANC(Base):
             betas=(0.5, 0.999),
         )
 
-        x = RoulettePositiveDataset().get_roulette_samples(len(PositiveDataset())).to(config.device)
+        # x = RoulettePositiveDataset().get_roulette_samples(len(PositiveDataset())).to(config.device)
+        x = PositiveDataset()[:][0].to(config.device)
+
         for _ in range(config.gan.epochs):
             for __ in range(config.gan.d_loops):
                 self.d.zero_grad()

@@ -23,8 +23,10 @@ GAN_MODELS = [
     src.gans.WGAN,
     src.gans.WGANGP,
     src.gans.SNGAN,
-    src.gans.RVSNGAN,
     src.gans.JUNGAN,
+    src.gans.JUNGANS,
+    src.gans.JUNGANC,
+    src.gans.RVSNGAN,
 ]
 
 if __name__ == '__main__':
@@ -61,7 +63,10 @@ if __name__ == '__main__':
             init='random',
             random_state=src.config.seed,
         ).fit_transform(x)
-        result[M.__name__] = [embedded_x, y]
+        model_name = M.__name__
+        if(M.__name__ == "RVSNGAN"):
+            model_name = "JUNGANL"
+        result[model_name] = [embedded_x, y]
 
     sns.set_style('white')
     fig, axes = plt.subplots(3, 4)
@@ -111,6 +116,6 @@ if __name__ == '__main__':
     plt.subplots_adjust(wspace=0.3, hspace=0.3)
 
     plt.savefig(src.config.path.test_results / 'all_distribution.jpg')
-    plt.savefig(src.config.path.test_results / "shap2.pdf", format='pdf', dpi=1000, bbox_inches='tight')
+    plt.savefig(src.config.path.test_results / "shap.pdf", format='pdf', dpi=1000, bbox_inches='tight')
 
     plt.show()
