@@ -109,5 +109,8 @@ if __name__ == '__main__':
     fig.set_dpi(100)
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), ncol=3)
     plt.subplots_adjust(wspace=0.3, hspace=0.3)
+
     plt.savefig(src.config.path.test_results / 'all_distribution.jpg')
+    plt.savefig(src.config.path.test_results / "shap2.pdf", format='pdf', dpi=1000, bbox_inches='tight')
+    
     plt.show()
