@@ -18,7 +18,7 @@ if __name__ == '__main__':
     smote = SMOTE(random_state=42)
     X_train_resampled, Y_train_resampled = smote.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
     
-    rgan_dataset = src.utils.get_rgan_dataset(src.gans.RVGAN())
+    rgan_dataset = src.utils.get_jgan_dataset(src.gans.GAN())
 
     # src.classifier.Classifier(gan_dataset)
     print("============ RF ============")
@@ -27,16 +27,19 @@ if __name__ == '__main__':
     print("============ LGBM ============")
     src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
     
+    print("============ RF with RGAN ============")
+    src.jun_classifier.RandomForest(rgan_dataset.samples, rgan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ LGBM with RGAN ============")
+    src.jun_classifier.LGBM(rgan_dataset.samples, rgan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+
     print("============ RF with SMOTE ============")
     src.jun_classifier.RandomForest(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
 
     print("============ LGBM with SMOTE ============")
     src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
 
-    # print("============ RF with GAN ============")
-    # src.regression.RandomForest(gan_dataset.samples, gan_dataset.labels, test_samples, test_labels)
-    # print("============ LGBM with GAN ============")
-    # src.regression.LGBM(gan_dataset.samples, gan_dataset.labels, test_samples, test_labels)
+   
     # print("============ LGBM with SMOTE ============")
     # src.regression.LGBM(X_train_resampled, y_train_resampled, test_samples, test_labels)
 

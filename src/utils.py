@@ -58,7 +58,7 @@ def preprocess_data(file_name):
     return samples, np.array(labels)
 
 
-def prepare_dataset(name, training_test_ratio: float = 0.1) -> None:
+def prepare_dataset(name, training_test_ratio: float = 0.05) -> None:
     samples, labels = preprocess_data(name)
     training_samples, test_samples, training_labels, test_labels = train_test_split(
         samples,
@@ -193,12 +193,62 @@ def get_rgan_dataset(rgan: src.gans.GANLike) -> src.datasets.FullDataset:
                 ol_pos_cnt += 1
         
         end_time = time.time()
-        
+
         print("update the number of positive samples")
         print("total_post_cnt : {}".format(total_pos_cnt))
         print("total_neg_cnt : {}".format(total_neg_cnt))
         print("ol_pos_cnt : {}".format(ol_pos_cnt))
         print("ol_neg_cnt : {}".format(ol_neg_cnt))
+        print("TIME : {}".format(end_time-start_time))
+
+    target_dataset.samples = target_dataset.samples.detach()
+    target_dataset.labels = target_dataset.labels.detach()
+
+    return target_dataset
+
+
+def get_jgan_dataset(rgan: src.gans.GANLike) -> src.datasets.FullDataset:
+    vae = src.vae.VAE()
+    vae.fit()
+    rgan.fit()
+
+    pos_dataset = src.datasets.PositiveDataset().to(src.config.device)
+    neg_dataset = src.datasets.NegativeDataset().to(src.config.device)
+    target_dataset = src.datasets.FullDataset().to(src.config.device)
+
+    # generate positive samples until reaching balance
+    total_pos_cnt = len(pos_dataset)
+    total_neg_cnt = len(neg_dataset)
+
+    while True:
+        start_time = time.time()
+        if total_pos_cnt >= total_neg_cnt // 20 :
+            break
+        else:
+            # update the number of positive samples
+            z = vae.generate_z()
+            new_sample = rgan.generate_samples(z)
+            new_label = torch.tensor([1], device=src.config.device)
+            target_dataset.samples = torch.cat(
+                [
+                    target_dataset.samples,
+                    new_sample,
+                ],
+            )
+            target_dataset.labels = torch.cat(
+                [
+                    target_dataset.labels,
+                    new_label,
+                ]
+            )
+            total_pos_cnt += 1
+        
+        end_time = time.time()
+
+        print("update the number of positive samples")
+        print("total_post_cnt : {}".format(total_pos_cnt))
+        print("total_neg_cnt : {}".format(total_neg_cnt))
+        print("(testing) total_neg_cnt // 20 : {}".format(total_neg_cnt // 20))
         print("TIME : {}".format(end_time-start_time))
 
     target_dataset.samples = target_dataset.samples.detach()
