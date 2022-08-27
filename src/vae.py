@@ -19,6 +19,7 @@ class VAE:
     def fit(self):
         self.logger.info('Started training')
         self.logger.debug(f'Using device: {config.device}')
+        
         e_optimizer = torch.optim.Adam(
             params=self.e.parameters(),
             lr=config.vae.e_lr,

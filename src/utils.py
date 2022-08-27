@@ -38,14 +38,18 @@ def preprocess_data(file_name):
     set_random_state()
     file_path = src.config.path.datasets / file_name
     df = pd.read_csv(file_path)
-    df.columns
 
+    # USING FOR TEST
+    new_df = src.sample.sampling(df, 5000)
+    new_df.columns
+    df = new_df
+    
     # src.utils.set_random_state()
     # src.utils.prepare_dataset(FILE_NAME)
 
     # #random sampling
     df = df.sample(frac=1)
-    print('=== STRAT PREPROCESS_DATA ===')
+
     samples = df.loc[:, 'V1' : 'Amount']
     labels = df.loc[:, 'Class']
 
@@ -222,7 +226,7 @@ def get_jgan_dataset(rgan: src.gans.GANLike) -> src.datasets.FullDataset:
 
     while True:
         start_time = time.time()
-        if total_pos_cnt >= total_neg_cnt // 20 :
+        if total_pos_cnt >= total_neg_cnt :
             break
         else:
             # update the number of positive samples
@@ -248,7 +252,6 @@ def get_jgan_dataset(rgan: src.gans.GANLike) -> src.datasets.FullDataset:
         print("update the number of positive samples")
         print("total_post_cnt : {}".format(total_pos_cnt))
         print("total_neg_cnt : {}".format(total_neg_cnt))
-        print("(testing) total_neg_cnt // 20 : {}".format(total_neg_cnt // 20))
         print("TIME : {}".format(end_time-start_time))
 
     target_dataset.samples = target_dataset.samples.detach()

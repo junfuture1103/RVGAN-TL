@@ -15,9 +15,11 @@ if __name__ == '__main__':
     full_dataset = src.datasets.FullDataset()
     test_dataset = src.datasets.FullDataset(training=False)
 
+    print("============ START SMOTE ============")
     smote = SMOTE(random_state=42)
     X_train_resampled, Y_train_resampled = smote.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
-    
+    print("============ DONE SMOTE ============")
+
     rgan_dataset = src.utils.get_jgan_dataset(src.gans.GAN())
 
     # src.classifier.Classifier(gan_dataset)

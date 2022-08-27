@@ -9,4 +9,5 @@ from . import (
     utils,
     vae,
     jun_classifier,
+    sample,
 )
