@@ -21,6 +21,7 @@ if __name__ == '__main__':
     print("============ DONE SMOTE ============")
 
     rgan_dataset = src.utils.get_jgan_dataset(src.gans.GAN())
+    rvsngan_dataset = src.utils.get_jgan_dataset(src.gans.RVSNGAN())
 
     # src.classifier.Classifier(gan_dataset)
     print("============ RF ============")
@@ -34,6 +35,12 @@ if __name__ == '__main__':
     
     print("============ LGBM with RGAN ============")
     src.jun_classifier.LGBM(rgan_dataset.samples, rgan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+   
+    print("============ RF with RVSNGAN ============")
+    src.jun_classifier.RandomForest(rvsngan_dataset.samples, rvsngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ LGBM with RVSNGAN ============")
+    src.jun_classifier.LGBM(rvsngan_dataset.samples, rvsngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
 
     print("============ RF with SMOTE ============")
     src.jun_classifier.RandomForest(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
@@ -41,10 +48,8 @@ if __name__ == '__main__':
     print("============ LGBM with SMOTE ============")
     src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
 
-   
     # print("============ LGBM with SMOTE ============")
     # src.regression.LGBM(X_train_resampled, y_train_resampled, test_samples, test_labels)
-
 
     # tl_classifier = src.tr_ada_boost.TrAdaBoost()
     # tl_classifier.fit(rgan_dataset, full_dataset)

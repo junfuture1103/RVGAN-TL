@@ -9,7 +9,7 @@ from imblearn.over_sampling import SMOTE, ADASYN, BorderlineSMOTE, RandomOverSam
 
 import src
 
-DATASET = 'wisconsin.dat'
+DATASET = 'creditcard.csv'
 
 TRADITIONAL_METHODS = [
     RandomOverSampler,
@@ -43,7 +43,7 @@ if __name__ == '__main__':
         x, _ = M(random_state=src.config.seed).fit_resample(raw_x, raw_y)
         y = np.concatenate([raw_y, np.full(len(x) - len(raw_x), 2)])
         embedded_x = TSNE(
-            learning_rate='auto',
+            # learning_rate='auto',
             init='random',
             random_state=src.config.seed,
         ).fit_transform(x)
@@ -57,7 +57,7 @@ if __name__ == '__main__':
         x = np.concatenate([raw_x, gan.g(z).detach().cpu().numpy()])
         y = np.concatenate([raw_y, np.full(len(x) - len(raw_x), 2)])
         embedded_x = TSNE(
-            learning_rate='auto',
+            # learning_rate='auto',
             init='random',
             random_state=src.config.seed,
         ).fit_transform(x)

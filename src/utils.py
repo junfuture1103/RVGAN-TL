@@ -40,7 +40,7 @@ def preprocess_data(file_name):
     df = pd.read_csv(file_path)
 
     # USING FOR TEST
-    new_df = src.sample.sampling(df, 5000)
+    new_df = src.sample.sampling(df, 1000)
     new_df.columns
     df = new_df
     
@@ -62,7 +62,7 @@ def preprocess_data(file_name):
     return samples, np.array(labels)
 
 
-def prepare_dataset(name, training_test_ratio: float = 0.05) -> None:
+def prepare_dataset(name, training_test_ratio: float = 0.6) -> None:
     samples, labels = preprocess_data(name)
     training_samples, test_samples, training_labels, test_labels = train_test_split(
         samples,
