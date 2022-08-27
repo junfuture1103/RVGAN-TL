@@ -16,9 +16,6 @@ def RandomForest(x_train, y_train, x_test, y_test):
     y_pred = model_rf.predict(x_test) 
     # validation
     y_real = y_test
-
-    print("y_real len : ", len(y_real))
-    print("y_real len : ", len(y_test))
  
     tn, fp, fn, tp = confusion_matrix(
         y_true=y_real,
@@ -59,9 +56,6 @@ def LGBM(x_train, y_train, x_test, y_test):
     y_pred = model_rf.predict(x_test) 
     # validation
     y_real = y_test
-
-    print("y_real len : ", len(y_real))
-    print("y_pred len : ", len(y_pred))
  
     tn, fp, fn, tp = confusion_matrix(
         y_true=y_real,

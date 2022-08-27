@@ -57,7 +57,7 @@ def preprocess_data(file_name):
     return samples, np.array(labels)
 
 
-def prepare_dataset(name, training_test_ratio: float = 0.8) -> None:
+def prepare_dataset(name, training_test_ratio: float = 0.1) -> None:
     samples, labels = preprocess_data(name)
     training_samples, test_samples, training_labels, test_labels = train_test_split(
         samples,

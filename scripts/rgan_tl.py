@@ -4,6 +4,7 @@ import os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 import src
+from imblearn.over_sampling import SMOTE
 
 FILE_NAME = 'creditcard.csv'
 
@@ -14,6 +15,9 @@ if __name__ == '__main__':
     full_dataset = src.datasets.FullDataset()
     test_dataset = src.datasets.FullDataset(training=False)
 
+    smote = SMOTE(random_state=42)
+    X_train_resampled, Y_train_resampled = smote.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
+    
     # rgan_dataset = src.utils.get_rgan_dataset(src.gans.RVGAN())
 
     # src.classifier.Classifier(gan_dataset)
@@ -23,6 +27,12 @@ if __name__ == '__main__':
     print("============ LGBM ============")
     src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
     
+    print("============ RF with SMOTE ============")
+    src.jun_classifier.RandomForest(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+
+    print("============ LGBM with SMOTE ============")
+    src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+
     # print("============ RF with GAN ============")
     # src.regression.RandomForest(gan_dataset.samples, gan_dataset.labels, test_samples, test_labels)
     # print("============ LGBM with GAN ============")
