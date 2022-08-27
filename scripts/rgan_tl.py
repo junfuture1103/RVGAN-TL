@@ -14,18 +14,32 @@ if __name__ == '__main__':
     full_dataset = src.datasets.FullDataset()
     test_dataset = src.datasets.FullDataset(training=False)
 
-    print(full_dataset)
-    print(test_dataset)
+    # rgan_dataset = src.utils.get_rgan_dataset(src.gans.RVGAN())
 
-    rgan_dataset = src.utils.get_rgan_dataset(src.gans.RVGAN())
-    tl_classifier = src.tr_ada_boost.TrAdaBoost()
-    tl_classifier.fit(rgan_dataset, full_dataset)
-    tl_classifier.test(test_dataset)
-    for name, value in tl_classifier.metrics.items():
-        print(f'{name:<15}:{value:>10.4f}')
+    # src.classifier.Classifier(gan_dataset)
+    print("============ RF ============")
+    src.jun_classifier.RandomForest(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ LGBM ============")
+    src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
+    
+    # print("============ RF with GAN ============")
+    # src.regression.RandomForest(gan_dataset.samples, gan_dataset.labels, test_samples, test_labels)
+    # print("============ LGBM with GAN ============")
+    # src.regression.LGBM(gan_dataset.samples, gan_dataset.labels, test_samples, test_labels)
+    # print("============ LGBM with SMOTE ============")
+    # src.regression.LGBM(X_train_resampled, y_train_resampled, test_samples, test_labels)
 
-    print('Started testing Original Classifier')
-    original_classifier = src.classifier.Classifier('Original')
-    original_classifier.fit(full_dataset)
-    for name, value in original_classifier.metrics.items():
-        print(f'{name:<15}:{value:>10.4f}')
+
+    # tl_classifier = src.tr_ada_boost.TrAdaBoost()
+    # tl_classifier.fit(rgan_dataset, full_dataset)
+    # tl_classifier.test(test_dataset)
+
+    # for name, value in tl_classifier.metrics.items():
+    #     print(f'{name:<15}:{value:>10.4f}')
+
+    # print('Started testing Original Classifier')
+    # original_classifier = src.classifier.Classifier('Original')
+    # original_classifier.fit(full_dataset)
+    # for name, value in original_classifier.metrics.items():
+    #     print(f'{name:<15}:{value:>10.4f}')
