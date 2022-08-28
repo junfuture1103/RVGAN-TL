@@ -60,9 +60,9 @@ if __name__ == '__main__':
     if os.path.exists(result_file):
         input(f'{result_file} already existed, continue?')
     all_gans = []
-    for i, j in PAIRS:
+    for i in PAIRS:
         all_gans.append(i.__name__)
-        all_gans.append(j.__name__)
+        # all_gans.append(j.__name__)
     result = {
         k: pd.DataFrame(
             {
