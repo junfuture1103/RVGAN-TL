@@ -8,13 +8,17 @@ class JUNGANDModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.step_1 = nn.Sequential(
-            spectral_norm(nn.Linear(src.models.x_size, 512)),
-            nn.SELU(),
-            spectral_norm(nn.Linear(512, 128)),
+            nn.Linear(src.models.x_size, 512),
+            nn.LayerNorm(512),
             nn.CELU(),
-            spectral_norm(nn.Linear(128, 32)),
-            nn.SELU(),
-            spectral_norm(nn.Linear(32, 8)),
+            nn.Linear(512, 128),
+            nn.LayerNorm(128),
+            nn.CELU(),
+            nn.Linear(128, 32),
+            nn.LayerNorm(32),
+            nn.CELU(),
+            nn.Linear(32, 8),
+            nn.LayerNorm(8),
             nn.CELU(),
         )
         self.step_2 = spectral_norm(nn.Linear(8, 1))

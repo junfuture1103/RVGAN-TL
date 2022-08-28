@@ -8,7 +8,8 @@ from .rv_wgan import RVWGAN
 from .rv_wgangp import RVWGANGP
 from .rv_sngan import RVSNGAN
 
-from .jungan import JUNGAN
+# from .jungan import JUNGAN
+from .junwgangp import JUNWGANGP
 from .jungans import JUNGANS
 from .junganc import JUNGANC
 

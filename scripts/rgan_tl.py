@@ -24,6 +24,8 @@ if __name__ == '__main__':
     
     sys.stdout.close()
     sys.stdout = open('stdout2.txt', 'w')
+    jungan_dataset = src.utils.get_gan_dataset(src.gans.JUNWGANGP())
+    
     gan_dataset = src.utils.get_gan_dataset(src.gans.GAN())
     wgan_dataset = src.utils.get_gan_dataset(src.gans.WGAN())
     wgangp_dataset = src.utils.get_gan_dataset(src.gans.WGANGP())
@@ -42,6 +44,7 @@ if __name__ == '__main__':
         pickle.dump(sngan_dataset, file)
         pickle.dump(jungans_dataset, file)
         pickle.dump(junganc_dataset, file)
+        pickle.dump(jungan_dataset, file)
 
     ############ GAN ############
     print("============ RF ============")
@@ -85,11 +88,16 @@ if __name__ == '__main__':
     # print("============ LGBM with JUNGAN ============")
     # src.jun_classifier.LGBM(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
 
-    # print("============ LGBM with JUNGANS ============")
+    print("============ LGBM with JUNGANS ============")
     src.jun_classifier.LGBM(jungans_dataset.samples, jungans_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
     
-    # print("============ LGBM with JUNGANC ============")
+    print("============ LGBM with JUNGANC ============")
     src.jun_classifier.LGBM(junganc_dataset.samples, junganc_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+
+    print("============ LGBM with JUNWGANGP ============")
+    src.jun_classifier.LGBM(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+
+
 
     sys.stdout.close()
     sys.stdout = open('stdout3.txt', 'w')
