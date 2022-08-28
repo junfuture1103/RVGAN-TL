@@ -10,7 +10,6 @@ from src.models import VAEEModel, VAEDModel
 
 
 class VAE:
-
     def __init__(self):
         self.logger = Logger(self.__class__.__name__)
         self.e = VAEEModel().to(config.device)
