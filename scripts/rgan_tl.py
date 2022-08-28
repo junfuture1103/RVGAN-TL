@@ -72,7 +72,6 @@ if __name__ == '__main__':
     print("============ RF with SNGANs ============")
     src.jun_classifier.RandomForest(sngan_dataset.samples, sngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
 
-    sys.stdout.close()
     # ############ JUNGAN ############
     # print("============ LGBM with JUNGAN ============")
     # src.jun_classifier.LGBM(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
@@ -82,9 +81,8 @@ if __name__ == '__main__':
     
     # print("============ LGBM with JUNGANC ============")
     src.jun_classifier.LGBM(junganc_dataset.samples, junganc_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    sys.stdout.close()
 
+    sys.stdout.close()
     sys.stdout = open('stdout3.txt', 'w')
     print("============ LGBM with RVJUNGANC ============")
     junganc_dataset = src.utils.get_jgan_dataset(src.gans.JUNGANC())
