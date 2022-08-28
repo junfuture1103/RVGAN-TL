@@ -1,5 +1,6 @@
 import sys
 import os
+import pickle
 
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
@@ -34,6 +35,14 @@ if __name__ == '__main__':
     junganc_dataset = src.utils.get_gan_dataset(src.gans.JUNGANC())
     # rvsngan_dataset = src.utils.get_jgan_dataset(src.gans.RVSNGAN())
     
+    with open('junganc_dataset.p', 'wb') as file:    # james.p 파일을 바이너리 쓰기 모드(wb)로 열기
+        pickle.dump(gan_dataset, file)
+        pickle.dump(wgan_dataset, file)
+        pickle.dump(wgangp_dataset, file)
+        pickle.dump(sngan_dataset, file)
+        pickle.dump(jungans_dataset, file)
+        pickle.dump(junganc_dataset, file)
+
     ############ GAN ############
     print("============ RF ============")
     src.jun_classifier.RandomForest(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
@@ -86,6 +95,10 @@ if __name__ == '__main__':
     sys.stdout = open('stdout3.txt', 'w')
     print("============ LGBM with RVJUNGANC ============")
     junganc_dataset = src.utils.get_jgan_dataset(src.gans.JUNGANC())
+ 
+    with open('junganc_dataset_rv.p', 'wb') as file2:    # james.p 파일을 바이너리 쓰기 모드(wb)로 열기
+        pickle.dump(junganc_dataset, file2)
+
     src.jun_classifier.LGBM(junganc_dataset.samples, junganc_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
     
     sys.stdout.close()

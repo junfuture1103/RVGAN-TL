@@ -1,0 +1,124 @@
+============ RF ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0 0 0 ... 0 0 0]
+Accuracy :  0.9995
+Precision :  0.9383
+Recall :  0.7795
+f1-score :  0.8516
+g_mean :  0.8828
+auc :  0.8897
+============ LGBM ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0 0 0 ... 0 0 0]
+Accuracy :  0.9983
+Precision :  0
+Recall :  0.0
+f1-score :  0
+g_mean :  0.0
+auc :  0.5
+============ RF with SMOTE ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0 0 0 ... 0 0 0]
+Accuracy :  0.9995
+Precision :  0.8586
+Recall :  0.841
+f1-score :  0.8497
+g_mean :  0.917
+auc :  0.9204
+============ LGBM with SMOTE ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0 0 0 ... 0 0 0]
+Accuracy :  0.9846
+Precision :  0.091
+Recall :  0.8872
+f1-score :  0.1651
+g_mean :  0.9347
+auc :  0.936
+============ LGBM with GAN ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0. 0. 0. ... 0. 0. 0.]
+Accuracy :  0.9994
+Precision :  0.8396
+Recall :  0.8051
+f1-score :  0.822
+g_mean :  0.8971
+auc :  0.9024
+============ LGBM with WGAN ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0. 0. 0. ... 0. 0. 0.]
+Accuracy :  0.9987
+Precision :  0.5818
+Recall :  0.8205
+f1-score :  0.6808
+g_mean :  0.9054
+auc :  0.9098
+============ LGBM with WGANGP ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0. 0. 0. ... 0. 0. 0.]
+Accuracy :  0.9994
+Precision :  0.847
+Recall :  0.7949
+f1-score :  0.8201
+g_mean :  0.8915
+auc :  0.8973
+============ LGBM with SNGANs ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0. 0. 0. ... 0. 0. 0.]
+Accuracy :  0.9995
+Precision :  0.9029
+Recall :  0.8103
+f1-score :  0.8541
+g_mean :  0.9001
+auc :  0.9051
+============ RF with GAN ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0. 0. 0. ... 0. 0. 0.]
+Accuracy :  0.9995
+Precision :  0.9255
+Recall :  0.7641
+f1-score :  0.8371
+g_mean :  0.8741
+auc :  0.882
+============ RF with WGAN ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0. 0. 0. ... 0. 0. 0.]
+Accuracy :  0.9994
+Precision :  0.8368
+Recall :  0.8154
+f1-score :  0.826
+g_mean :  0.9029
+auc :  0.9076
+============ RF with WGANGP ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0. 0. 0. ... 0. 0. 0.]
+Accuracy :  0.9995
+Precision :  0.9023
+Recall :  0.8051
+f1-score :  0.8509
+g_mean :  0.8972
+auc :  0.9025
+============ RF with SNGANs ============
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0. 0. 0. ... 0. 0. 0.]
+Accuracy :  0.9995
+Precision :  0.9162
+Recall :  0.7846
+f1-score :  0.8453
+g_mean :  0.8857
+auc :  0.8922
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0. 0. 0. ... 0. 0. 0.]
+Accuracy :  0.9995
+Precision :  0.8953
+Recall :  0.7897
+f1-score :  0.8392
+g_mean :  0.8886
+auc :  0.8948
+y_true :  [0 0 0 ... 0 0 0]
+y_pred :  [0. 0. 0. ... 0. 0. 0.]
+Accuracy :  0.9995
+Precision :  0.8864
+Recall :  0.8
+f1-score :  0.841
+g_mean :  0.8943
+auc :  0.8999
