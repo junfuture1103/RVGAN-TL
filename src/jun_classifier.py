@@ -47,7 +47,7 @@ def RandomForest(x_train, y_train, x_test, y_test):
 
 def LGBM(x_train, y_train, x_test, y_test):
     # modeling
-    model_rf = LGBMClassifier(random_state=0, n_estimators=500, learning_rate=0.05, max_depth= 15, min_child_samples= 10)
+    model_rf = LGBMClassifier(random_state=0, n_estimators=500, learning_rate=0.001, max_depth= 15, min_child_samples= 10)
 
     # train
     model_rf.fit(x_train, y_train)
