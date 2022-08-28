@@ -99,8 +99,9 @@ def get_knn_indices(sample: torch.Tensor, all_samples: torch.Tensor, k: int = 5)
 
 def get_gan_dataset(gan: src.gans.GANLike) -> src.datasets.FullDataset:
 
+    print("start ganfit")
     gan.fit()
-
+    print("done ganfit")
     full_dataset = src.datasets.FullDataset().to(src.config.device)
     pos_dataset = src.datasets.PositiveDataset().to(src.config.device)
     neg_dataset = src.datasets.NegativeDataset().to(src.config.device)
