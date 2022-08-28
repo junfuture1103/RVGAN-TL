@@ -40,9 +40,9 @@ def preprocess_data(file_name):
     df = pd.read_csv(file_path)
 
     # USING FOR TEST
-    new_df = src.sample.sampling(df, 1000)
-    new_df.columns
-    df = new_df
+    # new_df = src.sample.sampling(df, 1000)
+    # new_df.columns
+    # df = new_df
     
     # src.utils.set_random_state()
     # src.utils.prepare_dataset(FILE_NAME)
