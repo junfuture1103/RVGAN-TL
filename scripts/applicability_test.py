@@ -11,19 +11,23 @@ from tqdm import tqdm
 import src
 from scripts.datasets import DATASETS
 
-TEST_NAME = '2-11'
+TEST_NAME = '0'
+
+# PAIRS = [
+#     (src.gans.GAN, src.gans.RVGAN),
+#     (src.gans.WGAN, src.gans.RVWGAN),
+#     (src.gans.WGANGP, src.gans.RVWGANGP),
+#     (src.gans.SNGAN, src.gans.RVSNGAN),
+#     (src.gans.SNGAN, src.gans.JUNGAN),
+#     (src.gans.SNGAN, src.gans.JUNGANS),
+#     (src.gans.SNGAN, src.gans.JUNGANC),
+# ]
 
 PAIRS = [
-    (src.gans.GAN, src.gans.RVGAN),
-    (src.gans.WGAN, src.gans.RVWGAN),
-    (src.gans.WGANGP, src.gans.RVWGANGP),
-    (src.gans.SNGAN, src.gans.RVSNGAN),
-    (src.gans.SNGAN, src.gans.JUNGAN),
-    (src.gans.SNGAN, src.gans.JUNGANS),
-    (src.gans.SNGAN, src.gans.JUNGANC),
+    src.gans.GAN, src.gans.WGAN, src.gans.WGANGP, src.gans.SNGAN, src.gans.JUNGANS, src.gans.JUNGANC
 ]
 
-K = 10
+K = 5
 
 METRICS = [
     'Accuracy',
@@ -93,7 +97,7 @@ if __name__ == '__main__':
             src.datasets.test_labels = labels[test_indices]
             training_dataset = src.datasets.FullDataset(training=True)
             test_dataset = src.datasets.FullDataset(training=False)
-            for GAN, RGAN in PAIRS:
+            for GAN in PAIRS:
                 # test GAN
                 src.utils.set_random_state()
                 gan_dataset = src.utils.get_gan_dataset(GAN())
@@ -103,13 +107,13 @@ if __name__ == '__main__':
                 for metric_name in METRICS:
                     temp_result[metric_name][GAN.__name__].append(gan_classifier.metrics[metric_name])
                 # test RGAN
-                src.utils.set_random_state()
-                rgan_dataset = src.utils.get_jgan_dataset(RGAN())
-                rgan_classifier = src.lgbm.LGBM()
-                rgan_classifier.fit(rgan_dataset)
-                rgan_classifier.test(test_dataset)
-                for metric_name in METRICS:
-                    temp_result[metric_name][RGAN.__name__].append(rgan_classifier.metrics[metric_name])
+                # src.utils.set_random_state()
+                # rgan_dataset = src.utils.get_jgan_dataset(RGAN())
+                # rgan_classifier = src.lgbm.LGBM()
+                # rgan_classifier.fit(rgan_dataset)
+                # rgan_classifier.test(test_dataset)
+                # for metric_name in METRICS:
+                #     temp_result[metric_name][RGAN.__name__].append(rgan_classifier.metrics[metric_name])
             # calculate final metrics
             for gan_name in all_gans:
                 for metric_name in METRICS:
