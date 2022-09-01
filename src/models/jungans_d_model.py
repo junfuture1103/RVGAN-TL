@@ -4,7 +4,7 @@ from torch.nn.utils.parametrizations import spectral_norm
 
 import src
 
-class JUNGANSDModel(nn.Module):
+class FDGANSDModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.step_1 = nn.Sequential(

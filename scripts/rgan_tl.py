@@ -6,6 +6,7 @@ sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 import src
 from imblearn.over_sampling import SMOTE
+from imblearn.over_sampling import ADASYN, RandomOverSampler, BorderlineSMOTE
 
 FILE_NAME = 'creditcard.csv'
 
@@ -16,11 +17,32 @@ if __name__ == '__main__':
     src.utils.prepare_dataset(FILE_NAME)
     full_dataset = src.datasets.FullDataset()
     test_dataset = src.datasets.FullDataset(training=False)
-
+    print("============ LGBM ============")
+    src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
+    
     print("============ START SMOTE ============")
     smote = SMOTE(random_state=42)
     X_train_resampled, Y_train_resampled = smote.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
     print("============ DONE SMOTE ============")
+    src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ START SMOTE ============")
+    ada = ADASYN(random_state=42)
+    X_train_resampled, Y_train_resampled = ada.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
+    print("============ DONE SMOTE ============")
+    src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ START SMOTE ============")
+    ros = RandomOverSampler(random_state=42)
+    X_train_resampled, Y_train_resampled = ros.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
+    print("============ DONE SMOTE ============")
+    src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+    
+    print("============ START SMOTE ============")
+    ros = BorderlineSMOTE(random_state=42)
+    X_train_resampled, Y_train_resampled = ros.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
+    print("============ DONE SMOTE ============")
+    src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
     
     sys.stdout.close()
     sys.stdout = open('stdout2.txt', 'w')
@@ -97,19 +119,18 @@ if __name__ == '__main__':
     print("============ LGBM with JUNWGANGP ============")
     src.jun_classifier.LGBM(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
 
-
-
     sys.stdout.close()
-    sys.stdout = open('stdout3.txt', 'w')
-    print("============ LGBM with RVJUNGANC ============")
-    junganc_dataset = src.utils.get_jgan_dataset(src.gans.JUNGANC())
+
+    # sys.stdout = open('stdout3.txt', 'w')
+    # print("============ LGBM with RVJUNGANC ============")
+    # junganc_dataset = src.utils.get_jgan_dataset(src.gans.JUNGANC())
  
-    with open('junganc_dataset_rv.p', 'wb') as file2:    # james.p 파일을 바이너리 쓰기 모드(wb)로 열기
-        pickle.dump(junganc_dataset, file2)
+    # with open('junganc_dataset_rv.p', 'wb') as file2:    # james.p 파일을 바이너리 쓰기 모드(wb)로 열기
+    #     pickle.dump(junganc_dataset, file2)
 
-    src.jun_classifier.LGBM(junganc_dataset.samples, junganc_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+    # src.jun_classifier.LGBM(junganc_dataset.samples, junganc_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
     
-    sys.stdout.close()
+    # sys.stdout.close()
     # print("============ LGBM with RVSNGANs ============")
     # src.jun_classifier.LGBM(rvsngan_dataset.samples, rvsngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
 

@@ -38,11 +38,18 @@ def preprocess_data(file_name):
     set_random_state()
     file_path = src.config.path.datasets / file_name
     df = pd.read_csv(file_path)
-
+    new_df = df
     # USING FOR TEST
-    # new_df = src.sample.sampling(df, 1000)
-    # new_df.columns
-    # df = new_df
+
+    print('Distribution of the Classes in the subsample dataset')
+    
+    print(new_df['Class'].value_counts())
+    print(new_df['Class'].value_counts()/len(new_df))
+
+
+    new_df = src.sample.sampling(df, 5000)
+    new_df.columns
+    df = new_df
     
     # src.utils.set_random_state()
     # src.utils.prepare_dataset(FILE_NAME)

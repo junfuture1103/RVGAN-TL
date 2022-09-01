@@ -2,14 +2,14 @@ import torch
 
 import src
 from src import config, models
-from src.models import SNGANGModel, JUNGANCDModel
+from src.models import SNGANGModel, FDGANCDModel
 from src.datasets import PositiveDataset, RoulettePositiveDataset
 from ._base import Base
 
 
-class JUNGANC(Base):
+class FDGANC(Base):
     def __init__(self):
-        super().__init__(SNGANGModel(), JUNGANCDModel())
+        super().__init__(SNGANGModel(), FDGANCDModel())
 
     def _fit(self):
         d_optimizer = torch.optim.Adam(

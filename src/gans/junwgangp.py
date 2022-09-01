@@ -1,14 +1,14 @@
 import torch
 
 from src import config, models
-from src.models import WGANGPGModel, JUNGANDModel
+from src.models import WGANGPGModel, FDGANDModel
 from src.datasets import PositiveDataset
 from ._base import Base
 
 
-class JUNWGANGP(Base):
+class FDGAN(Base):
     def __init__(self):
-        super().__init__(WGANGPGModel(), JUNGANDModel())
+        super().__init__(WGANGPGModel(), FDGANDModel())
 
     def _fit(self):
         d_optimizer = torch.optim.Adam(

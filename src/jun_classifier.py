@@ -1,5 +1,6 @@
 from math import sqrt
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
 # Add 
 from sklearn.metrics import roc_auc_score, confusion_matrix
 from lightgbm import LGBMClassifier
@@ -62,7 +63,7 @@ def LGBM(x_train, y_train, x_test, y_test):
         y_pred=y_pred,
     ).ravel()
 
-    accuracy = round(sum(y_pred == y_real) / len(y_pred), 4)
+    accuracy = round(accuracy_score(y_pred, y_test) ,4)
     precision = round(tp / (tp + fp) if tp + fp != 0 else 0 , 4)
     recall = round(tp / (tp + fn) if tp + fn != 0 else 0 , 4)
     specificity = round(tn / (tn + fp) if tn + fp != 0 else 0 , 4)
@@ -82,4 +83,4 @@ def LGBM(x_train, y_train, x_test, y_test):
     print('g_mean : ', g_mean)
     print('auc : ', auc)
 
-    return
+    return [accuracy, precision, recall, f1, g_mean, auc]

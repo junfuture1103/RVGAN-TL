@@ -5,7 +5,6 @@ from . import (
     models,
     classifier,
     logger,
-    tr_ada_boost,
     utils,
     vae,
     jun_classifier,
