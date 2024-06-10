@@ -6,7 +6,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
 
 # 파일 경로 설정
-file_path = '../mcc_classifier-master/ecoli2.dat'
+file_path = '../data/testarff/diabetes.csv'
 
 # ARFF 파일을 읽고 헤더에서 문제를 일으키는 줄을 주석 처리
 with open(file_path, 'r') as file:

@@ -17,6 +17,7 @@ if __name__ == '__main__':
     src.utils.prepare_dataset(FILE_NAME)
     full_dataset = src.datasets.FullDataset()
     test_dataset = src.datasets.FullDataset(training=False)
+    
     print("============ LGBM ============")
     src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
     
@@ -54,19 +55,12 @@ if __name__ == '__main__':
     sngan_dataset = src.utils.get_gan_dataset(src.gans.SNGAN())
 
     jungan_dataset = src.utils.get_jgan_dataset(src.gans.JUNGAN())
-    # jungans_dataset = src.utils.get_gan_dataset(src.gans.JUNGANS())
-    # junganc_dataset = src.utils.get_jgan_dataset(src.gans.JUNGANC())
-    # junganc_dataset = src.utils.get_gan_dataset(src.gans.JUNGANC())
-    # rvsngan_dataset = src.utils.get_jgan_dataset(src.gans.RVSNGAN())
     
     with open('junganc_dataset.p', 'wb') as file:    # james.p 파일을 바이너리 쓰기 모드(wb)로 열기
         pickle.dump(gan_dataset, file)
         pickle.dump(wgan_dataset, file)
         pickle.dump(wgangp_dataset, file)
         pickle.dump(sngan_dataset, file)
-        # pickle.dump(jungans_dataset, file)
-        # pickle.dump(junganc_dataset, file)
-        # pickle.dump(jungan_dataset, file)
 
     ############ GAN ############
     print("============ RF ============")
@@ -109,16 +103,6 @@ if __name__ == '__main__':
     # ############ JUNGAN ############
     # print("============ LGBM with JUNGAN ============")
     # src.jun_classifier.LGBM(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-
-    # print("============ LGBM with JUNGANS ============")
-    # src.jun_classifier.LGBM(jungans_dataset.samples, jungans_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # print("============ LGBM with JUNGANC ============")
-    # src.jun_classifier.LGBM(junganc_dataset.samples, junganc_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-
-    # print("============ LGBM with JUNWGANGP ============")
-    # src.jun_classifier.LGBM(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-
     sys.stdout.close()
 
     # sys.stdout = open('stdout3.txt', 'w')

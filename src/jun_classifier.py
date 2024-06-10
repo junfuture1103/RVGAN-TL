@@ -1,9 +1,9 @@
 from math import sqrt
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+import lightgbm as lgb
 # Add 
 from sklearn.metrics import roc_auc_score, confusion_matrix
-from lightgbm import LGBMClassifier
 from sklearn.model_selection import cross_val_score
 
 def RandomForest(x_train, y_train, x_test, y_test):
@@ -48,13 +48,12 @@ def RandomForest(x_train, y_train, x_test, y_test):
 
 def LGBM(x_train, y_train, x_test, y_test):
     # modeling
-    model_rf = LGBMClassifier(random_state=0, n_estimators=500, learning_rate=0.001, max_depth= 15, min_child_samples= 10)
-
+    model_lgbm = lgb.LGBMClassifier(n_estimators=15)
     # train
-    model_rf.fit(x_train, y_train)
+    model_lgbm.fit(x_train, y_train)
 
     # predict
-    y_pred = model_rf.predict(x_test) 
+    y_pred = model_lgbm.predict(x_test) 
     # validation
     y_real = y_test
  
@@ -63,7 +62,7 @@ def LGBM(x_train, y_train, x_test, y_test):
         y_pred=y_pred,
     ).ravel()
 
-    accuracy = round(accuracy_score(y_pred, y_test) ,4)
+    accuracy = round(sum(y_pred == y_real) / len(y_pred), 4)
     precision = round(tp / (tp + fp) if tp + fp != 0 else 0 , 4)
     recall = round(tp / (tp + fn) if tp + fn != 0 else 0 , 4)
     specificity = round(tn / (tn + fp) if tn + fp != 0 else 0 , 4)
@@ -83,4 +82,4 @@ def LGBM(x_train, y_train, x_test, y_test):
     print('g_mean : ', g_mean)
     print('auc : ', auc)
 
-    return [accuracy, precision, recall, f1, g_mean, auc]
+    return

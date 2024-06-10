@@ -7,6 +7,7 @@ import pandas as pd
 from torch import nn
 from sklearn.preprocessing import minmax_scale
 from sklearn.model_selection import train_test_split
+from scipy.io import arff
 
 import src
 
@@ -69,6 +70,65 @@ def preprocess_data(file_name):
     return samples, np.array(labels)
 
 
+def preprocess_arff_data(file_path):
+    try:
+        # ARFF 파일을 읽어 데이터프레임으로 변환
+        data, meta = arff.loadarff(file_path)
+        df = pd.DataFrame(data)
+
+        # 'Class' 열이 없는 경우 예외 처리
+        if 'Class' not in df.columns:
+            print(f"'Class' column not found in file {file_path}, skipping this file.")
+            return None, None
+
+        # 클래스 라벨을 문자열로 변환
+        df['Class'] = df['Class'].apply(lambda x: x.decode('utf-8'))
+
+        # 클래스 라벨을 숫자로 변환
+        class_mapping = {label: idx for idx, label in enumerate(df['Class'].unique())}
+        df['Class'] = df['Class'].map(class_mapping)
+
+        new_df = df
+        print('Distribution of the Classes in the subsample dataset')
+        print(new_df['Class'].value_counts())
+        print(new_df['Class'].value_counts() / len(new_df))
+
+        df = new_df
+
+        # 데이터 섞기
+        df = df.sample(frac=1, random_state=42)
+
+        samples = df.loc[:, df.columns != 'Class']
+        labels = df.loc[:, 'Class']
+
+        # 정규화
+        samples = minmax_scale(samples.astype('float32'))
+        labels = labels.astype('int')
+
+        src.models.x_size = samples.shape[1]
+
+        print("====== arff datasets ======")
+        print(samples)
+        print(labels)
+
+        return samples, np.array(labels)
+    except Exception as e:
+        print(f"Error processing file {file_path}: {e}")
+        return None, None
+
+def prepare_arff_dataset(name, training_test_ratio: float = 0.6) -> None:
+    samples, labels = preprocess_arff_data(name)
+    training_samples, test_samples, training_labels, test_labels = train_test_split(
+        samples,
+        labels,
+        train_size=training_test_ratio,
+        random_state=src.config.seed,
+    )
+    src.datasets.training_samples = training_samples
+    src.datasets.training_labels = training_labels
+    src.datasets.test_samples = test_samples
+    src.datasets.test_labels = test_labels
+
 def prepare_dataset(name, training_test_ratio: float = 0.6) -> None:
     samples, labels = preprocess_data(name)
     training_samples, test_samples, training_labels, test_labels = train_test_split(
@@ -81,7 +141,6 @@ def prepare_dataset(name, training_test_ratio: float = 0.6) -> None:
     src.datasets.training_labels = training_labels
     src.datasets.test_samples = test_samples
     src.datasets.test_labels = test_labels
-
 
 def get_final_test_metrics(statistics: dict) -> dict:
     metrics = dict()

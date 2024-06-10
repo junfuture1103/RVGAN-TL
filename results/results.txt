@@ -1,0 +1,484 @@
+File: ecoli2.dat
+ Class  Count
+     0    284
+     1     52
+
+Class Counts:
+Class
+0    284
+1     52
+Imbalance Ratio (IR): 5.461538461538462
+==================================================
+File: glass-0-1-6_vs_5.dat
+ Class  Count
+     0    175
+     1      9
+
+Class Counts:
+Class
+0    175
+1      9
+Imbalance Ratio (IR): 19.444444444444443
+==================================================
+File: ecoli4.dat
+ Class  Count
+     0    316
+     1     20
+
+Class Counts:
+Class
+0    316
+1     20
+Imbalance Ratio (IR): 15.8
+==================================================
+File: yeast6.dat
+ Class  Count
+     0   1449
+     1     35
+
+Class Counts:
+Class
+0    1449
+1      35
+Imbalance Ratio (IR): 41.4
+==================================================
+Error processing file glass-0-4_vs_5.dat: 'Class'
+File: glass2.dat
+ Class  Count
+     0    197
+     1     17
+
+Class Counts:
+Class
+0    197
+1     17
+Imbalance Ratio (IR): 11.588235294117647
+==================================================
+Error processing file led7digit-0-2-4-5-6-7-8-9_vs_1.dat: 'Class'
+Error processing file glass-0-1-4-6_vs_2.dat: 'Class'
+Error processing file glass-0-6_vs_5.dat: 'Class'
+File: iris0.dat
+ Class  Count
+     1    100
+     0     50
+
+Class Counts:
+Class
+1    100
+0     50
+Imbalance Ratio (IR): 2.0
+==================================================
+File: yeast4.dat
+ Class  Count
+     0   1433
+     1     51
+
+Class Counts:
+Class
+0    1433
+1      51
+Imbalance Ratio (IR): 28.098039215686274
+==================================================
+Error processing file ecoli-0-1-4-6_vs_5.dat: 'Class'
+Error processing file ecoli-0-6-7_vs_5.dat: 'Class'
+Error processing file ecoli-0-4-6_vs_5.dat: 'Class'
+File: yeast1.dat
+ Class  Count
+     0   1055
+     1    429
+
+Class Counts:
+Class
+0    1055
+1     429
+Imbalance Ratio (IR): 2.4592074592074593
+==================================================
+Error processing file ecoli-0-1_vs_5.dat: 'Class'
+Error processing file yeast-0-3-5-9_vs_7-8.dat: 'Class'
+File: ecoli1.dat
+ Class  Count
+     0    259
+     1     77
+
+Class Counts:
+Class
+0    259
+1     77
+Imbalance Ratio (IR): 3.3636363636363638
+==================================================
+File: ecoli3.dat
+ Class  Count
+     0    301
+     1     35
+
+Class Counts:
+Class
+0    301
+1     35
+Imbalance Ratio (IR): 8.6
+==================================================
+Error processing file glass-0-1-5_vs_2.dat: 'Class'
+File: ecoli-0_vs_1.dat
+ Class  Count
+     0    143
+     1     77
+
+Class Counts:
+Class
+0    143
+1     77
+Imbalance Ratio (IR): 1.8571428571428572
+==================================================
+File: glass6.dat
+ Class  Count
+     0    185
+     1     29
+
+Class Counts:
+Class
+0    185
+1     29
+Imbalance Ratio (IR): 6.379310344827586
+==================================================
+Error processing file ecoli-0-2-3-4_vs_5.dat: 'Class'
+Error processing file cleveland-0_vs_4.dat: 'Class'
+Error processing file ecoli-0-6-7_vs_3-5.dat: 'Class'
+File: yeast-2_vs_8.dat
+ Class  Count
+     0    462
+     1     20
+
+Class Counts:
+Class
+0    462
+1     20
+Imbalance Ratio (IR): 23.1
+==================================================
+Error processing file yeast-0-2-5-6_vs_3-7-8-9.dat: 'Class'
+File: yeast-1_vs_7.dat
+ Class  Count
+     0    429
+     1     30
+
+Class Counts:
+Class
+0    429
+1     30
+Imbalance Ratio (IR): 14.3
+==================================================
+File: yeast5.dat
+ Class  Count
+     0   1440
+     1     44
+
+Class Counts:
+Class
+0    1440
+1      44
+Imbalance Ratio (IR): 32.72727272727273
+==================================================
+Error processing file ecoli-0-2-6-7_vs_3-5.dat: 'Class'
+File: glass5.dat
+ Class  Count
+     0    205
+     1      9
+
+Class Counts:
+Class
+0    205
+1      9
+Imbalance Ratio (IR): 22.77777777777778
+==================================================
+File: shuttle-c0-vs-c4.dat
+ Class  Count
+     0   1706
+     1    123
+
+Class Counts:
+Class
+0    1706
+1     123
+Imbalance Ratio (IR): 13.869918699186991
+==================================================
+File: yeast-2_vs_4.dat
+ Class  Count
+     0    463
+     1     51
+
+Class Counts:
+Class
+0    463
+1     51
+Imbalance Ratio (IR): 9.07843137254902
+==================================================
+File: new-thyroid2.dat
+ Class  Count
+     0    180
+     1     35
+
+Class Counts:
+Class
+0    180
+1     35
+Imbalance Ratio (IR): 5.142857142857143
+==================================================
+File: wisconsin.dat
+ Class  Count
+     0    444
+     1    239
+
+Class Counts:
+Class
+0    444
+1    239
+Imbalance Ratio (IR): 1.8577405857740585
+==================================================
+File: glass-0-1-6_vs_2.dat
+ Class  Count
+     0    175
+     1     17
+
+Class Counts:
+Class
+0    175
+1     17
+Imbalance Ratio (IR): 10.294117647058824
+==================================================
+File: glass0.dat
+ Class  Count
+     1    144
+     0     70
+
+Class Counts:
+Class
+1    144
+0     70
+Imbalance Ratio (IR): 2.057142857142857
+==================================================
+File: page-blocks-1-3_vs_4.dat
+ Class  Count
+     0    444
+     1     28
+
+Class Counts:
+Class
+0    444
+1     28
+Imbalance Ratio (IR): 15.857142857142858
+==================================================
+File: vehicle0.dat
+ Class  Count
+     1    647
+     0    199
+
+Class Counts:
+Class
+1    647
+0    199
+Imbalance Ratio (IR): 3.251256281407035
+==================================================
+Error processing file ecoli-0-3-4-7_vs_5-6.dat: 'Class'
+Error processing file ecoli-0-1-4-7_vs_5-6.dat: 'Class'
+File: yeast3.dat
+ Class  Count
+     0   1321
+     1    163
+
+Class Counts:
+Class
+0    1321
+1     163
+Imbalance Ratio (IR): 8.104294478527608
+==================================================
+File: glass4.dat
+ Class  Count
+     0    201
+     1     13
+
+Class Counts:
+Class
+0    201
+1     13
+Imbalance Ratio (IR): 15.461538461538462
+==================================================
+File: yeast-1-4-5-8_vs_7.dat
+ Class  Count
+     0    663
+     1     30
+
+Class Counts:
+Class
+0    663
+1     30
+Imbalance Ratio (IR): 22.1
+==================================================
+File: yeast-1-2-8-9_vs_7.dat
+ Class  Count
+     0    917
+     1     30
+
+Class Counts:
+Class
+0    917
+1     30
+Imbalance Ratio (IR): 30.566666666666666
+==================================================
+File: segment0.dat
+ Class  Count
+     0   1979
+     1    329
+
+Class Counts:
+Class
+0    1979
+1     329
+Imbalance Ratio (IR): 6.015197568389058
+==================================================
+File: glass1.dat
+ Class  Count
+     0    138
+     1     76
+
+Class Counts:
+Class
+0    138
+1     76
+Imbalance Ratio (IR): 1.8157894736842106
+==================================================
+File: vehicle1.dat
+ Class  Count
+     0    629
+     1    217
+
+Class Counts:
+Class
+0    629
+1    217
+Imbalance Ratio (IR): 2.8986175115207375
+==================================================
+File: vowel0.dat
+ Class  Count
+     1    898
+     0     90
+
+Class Counts:
+Class
+1    898
+0     90
+Imbalance Ratio (IR): 9.977777777777778
+==================================================
+File: haberman.dat
+ Class  Count
+     0    225
+     1     81
+
+Class Counts:
+Class
+0    225
+1     81
+Imbalance Ratio (IR): 2.7777777777777777
+==================================================
+File: new-thyroid1.dat
+ Class  Count
+     0    180
+     1     35
+
+Class Counts:
+Class
+0    180
+1     35
+Imbalance Ratio (IR): 5.142857142857143
+==================================================
+File: ecoli-0-1-3-7_vs_2-6.dat
+ Class  Count
+     0    274
+     1      7
+
+Class Counts:
+Class
+0    274
+1      7
+Imbalance Ratio (IR): 39.142857142857146
+==================================================
+File: vehicle3.dat
+ Class  Count
+     0    634
+     1    212
+
+Class Counts:
+Class
+0    634
+1    212
+Imbalance Ratio (IR): 2.990566037735849
+==================================================
+Error processing file ecoli-0-1_vs_2-3-5.dat: 'Class'
+File: pima.dat
+ Class  Count
+     1    500
+     0    268
+
+Class Counts:
+Class
+1    500
+0    268
+Imbalance Ratio (IR): 1.8656716417910448
+==================================================
+File: glass-0-1-2-3_vs_4-5-6.dat
+ Class  Count
+     0    163
+     1     51
+
+Class Counts:
+Class
+0    163
+1     51
+Imbalance Ratio (IR): 3.196078431372549
+==================================================
+File: page-blocks0.dat
+ Class  Count
+     0   4913
+     1    559
+
+Class Counts:
+Class
+0    4913
+1     559
+Imbalance Ratio (IR): 8.788908765652952
+==================================================
+Error processing file ecoli-0-3-4_vs_5.dat: 'Class'
+Error processing file ecoli-0-3-4-6_vs_5.dat: 'Class'
+File: shuttle-c2-vs-c4.dat
+ Class  Count
+     1    123
+     0      6
+
+Class Counts:
+Class
+1    123
+0      6
+Imbalance Ratio (IR): 20.5
+==================================================
+File: vehicle2.dat
+ Class  Count
+     0    628
+     1    218
+
+Class Counts:
+Class
+0    628
+1    218
+Imbalance Ratio (IR): 2.8807339449541285
+==================================================
+File: yeast-0-5-6-7-9_vs_4.dat
+ Class  Count
+     0    477
+     1     51
+
+Class Counts:
+Class
+0    477
+1     51
+Imbalance Ratio (IR): 9.352941176470589
+==================================================
+Error processing file ecoli-0-1-4-7_vs_2-3-5-6.dat: 'Class'
+Error processing file yeast-0-2-5-7-9_vs_3-6-8.dat: 'Class'

@@ -1,0 +1,320 @@
+Classification Results
+
+Results for ecoli3.dat_cleaned.arff:
+ROS_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       1.00      0.95      0.97       301
+    positive       0.95      1.00      0.97       301
+
+    accuracy                           0.97       602
+   macro avg       0.97      0.97      0.97       602
+weighted avg       0.97      0.97      0.97       602
+
+ROS_RF ROC-AUC: 0.9996026533923468
+ROS_RF PR-AUC: 0.9996135674642069
+
+SMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.99      0.93      0.96       301
+    positive       0.93      0.99      0.96       301
+
+    accuracy                           0.96       602
+   macro avg       0.96      0.96      0.96       602
+weighted avg       0.96      0.96      0.96       602
+
+SMOTE_RF ROC-AUC: 0.9904636814163199
+SMOTE_RF PR-AUC: 0.9887415603288033
+
+ADASYN_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.98      0.93      0.96       301
+    positive       0.93      0.98      0.96       300
+
+    accuracy                           0.96       601
+   macro avg       0.96      0.96      0.96       601
+weighted avg       0.96      0.96      0.96       601
+
+ADASYN_RF ROC-AUC: 0.9926135105204873
+ADASYN_RF PR-AUC: 0.9918077298099472
+
+BorderlineSMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.97      0.93      0.95       301
+    positive       0.93      0.97      0.95       301
+
+    accuracy                           0.95       602
+   macro avg       0.95      0.95      0.95       602
+weighted avg       0.95      0.95      0.95       602
+
+BorderlineSMOTE_RF ROC-AUC: 0.9916336464277435
+BorderlineSMOTE_RF PR-AUC: 0.9920850103368424
+
+Results for vehicle3.dat_cleaned.arff:
+ROS_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.96      0.84      0.89       634
+    positive       0.86      0.96      0.90       634
+
+    accuracy                           0.90      1268
+   macro avg       0.91      0.90      0.90      1268
+weighted avg       0.91      0.90      0.90      1268
+
+ROS_RF ROC-AUC: 0.9849150155738439
+ROS_RF PR-AUC: 0.9865528304498856
+
+SMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.92      0.83      0.87       634
+    positive       0.84      0.93      0.88       634
+
+    accuracy                           0.88      1268
+   macro avg       0.88      0.88      0.88      1268
+weighted avg       0.88      0.88      0.88      1268
+
+SMOTE_RF ROC-AUC: 0.954858243190797
+SMOTE_RF PR-AUC: 0.951391614837259
+
+ADASYN_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.93      0.83      0.88       634
+    positive       0.85      0.94      0.89       631
+
+    accuracy                           0.88      1265
+   macro avg       0.89      0.88      0.88      1265
+weighted avg       0.89      0.88      0.88      1265
+
+ADASYN_RF ROC-AUC: 0.95489108970289
+ADASYN_RF PR-AUC: 0.9479828839781658
+
+BorderlineSMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.93      0.82      0.87       634
+    positive       0.84      0.93      0.88       634
+
+    accuracy                           0.88      1268
+   macro avg       0.88      0.88      0.88      1268
+weighted avg       0.88      0.88      0.88      1268
+
+BorderlineSMOTE_RF ROC-AUC: 0.9571283921623263
+BorderlineSMOTE_RF PR-AUC: 0.9557258711930268
+
+Results for yeast-0-2-5-6_vs_3-7-8-9.dat_cleaned.arff:
+ROS_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       1.00      0.98      0.99       905
+    positive       0.98      1.00      0.99       905
+
+    accuracy                           0.99      1810
+   macro avg       0.99      0.99      0.99      1810
+weighted avg       0.99      0.99      0.99      1810
+
+ROS_RF ROC-AUC: 0.999910869631574
+ROS_RF PR-AUC: 0.999910787214676
+
+SMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.94      0.96      0.95       905
+    positive       0.96      0.94      0.95       905
+
+    accuracy                           0.95      1810
+   macro avg       0.95      0.95      0.95      1810
+weighted avg       0.95      0.95      0.95      1810
+
+SMOTE_RF ROC-AUC: 0.9895467171331767
+SMOTE_RF PR-AUC: 0.9895995798654227
+
+ADASYN_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.95      0.96      0.95       905
+    positive       0.95      0.95      0.95       895
+
+    accuracy                           0.95      1800
+   macro avg       0.95      0.95      0.95      1800
+weighted avg       0.95      0.95      0.95      1800
+
+ADASYN_RF ROC-AUC: 0.9881650668230502
+ADASYN_RF PR-AUC: 0.9862141778147141
+
+BorderlineSMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.95      0.97      0.96       905
+    positive       0.97      0.95      0.96       905
+
+    accuracy                           0.96      1810
+   macro avg       0.96      0.96      0.96      1810
+weighted avg       0.96      0.96      0.96      1810
+
+BorderlineSMOTE_RF ROC-AUC: 0.9867818442660479
+BorderlineSMOTE_RF PR-AUC: 0.9882955072752772
+
+Results for yeast3.dat_cleaned.arff:
+ROS_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       1.00      0.97      0.98      1321
+    positive       0.97      1.00      0.98      1321
+
+    accuracy                           0.98      2642
+   macro avg       0.98      0.98      0.98      2642
+weighted avg       0.98      0.98      0.98      2642
+
+ROS_RF ROC-AUC: 0.9998676248867505
+ROS_RF PR-AUC: 0.9998678656607815
+
+SMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.98      0.97      0.97      1321
+    positive       0.97      0.98      0.97      1321
+
+    accuracy                           0.97      2642
+   macro avg       0.97      0.97      0.97      2642
+weighted avg       0.97      0.97      0.97      2642
+
+SMOTE_RF ROC-AUC: 0.9956379248395884
+SMOTE_RF PR-AUC: 0.995314521869999
+
+ADASYN_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.98      0.96      0.97      1321
+    positive       0.96      0.98      0.97      1347
+
+    accuracy                           0.97      2668
+   macro avg       0.97      0.97      0.97      2668
+weighted avg       0.97      0.97      0.97      2668
+
+ADASYN_RF ROC-AUC: 0.9949808557666208
+ADASYN_RF PR-AUC: 0.9942997942157951
+
+BorderlineSMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.99      0.96      0.97      1321
+    positive       0.96      0.99      0.97      1321
+
+    accuracy                           0.97      2642
+   macro avg       0.97      0.97      0.97      2642
+weighted avg       0.97      0.97      0.97      2642
+
+BorderlineSMOTE_RF ROC-AUC: 0.9947419573522914
+BorderlineSMOTE_RF PR-AUC: 0.994782018000355
+
+Results for glass-0-1-2-3_vs_4-5-6.dat_cleaned.arff:
+ROS_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.97      0.96      0.97       163
+    positive       0.96      0.98      0.97       163
+
+    accuracy                           0.97       326
+   macro avg       0.97      0.97      0.97       326
+weighted avg       0.97      0.97      0.97       326
+
+ROS_RF ROC-AUC: 0.9972900748993188
+ROS_RF PR-AUC: 0.9973040920281249
+
+SMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.97      0.95      0.96       163
+    positive       0.95      0.98      0.96       163
+
+    accuracy                           0.96       326
+   macro avg       0.96      0.96      0.96       326
+weighted avg       0.96      0.96      0.96       326
+
+SMOTE_RF ROC-AUC: 0.9961985772893222
+SMOTE_RF PR-AUC: 0.9964800424295537
+
+ADASYN_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.99      0.94      0.97       163
+    positive       0.95      0.99      0.97       168
+
+    accuracy                           0.97       331
+   macro avg       0.97      0.97      0.97       331
+weighted avg       0.97      0.97      0.97       331
+
+ADASYN_RF ROC-AUC: 0.9957274320771253
+ADASYN_RF PR-AUC: 0.9958485731170859
+
+BorderlineSMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.98      0.94      0.96       163
+    positive       0.95      0.98      0.96       163
+
+    accuracy                           0.96       326
+   macro avg       0.96      0.96      0.96       326
+weighted avg       0.96      0.96      0.96       326
+
+BorderlineSMOTE_RF ROC-AUC: 0.9955963717113929
+BorderlineSMOTE_RF PR-AUC: 0.9957480193768422
+
+Results for yeast1.dat_cleaned.arff:
+ROS_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.92      0.84      0.88      1055
+    positive       0.85      0.93      0.89      1055
+
+    accuracy                           0.88      2110
+   macro avg       0.89      0.88      0.88      2110
+weighted avg       0.89      0.88      0.88      2110
+
+ROS_RF ROC-AUC: 0.960923609083354
+ROS_RF PR-AUC: 0.9665832647699439
+
+SMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.85      0.82      0.84      1055
+    positive       0.83      0.86      0.84      1055
+
+    accuracy                           0.84      2110
+   macro avg       0.84      0.84      0.84      2110
+weighted avg       0.84      0.84      0.84      2110
+
+SMOTE_RF ROC-AUC: 0.9179043597403472
+SMOTE_RF PR-AUC: 0.9189374111986548
+
+ADASYN_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.85      0.80      0.82      1055
+    positive       0.82      0.86      0.84      1118
+
+    accuracy                           0.83      2173
+   macro avg       0.83      0.83      0.83      2173
+weighted avg       0.83      0.83      0.83      2173
+
+ADASYN_RF ROC-AUC: 0.9180565329082909
+ADASYN_RF PR-AUC: 0.9226747666011685
+
+BorderlineSMOTE_RF classification report:
+              precision    recall  f1-score   support
+
+    negative       0.87      0.82      0.84      1055
+    positive       0.83      0.88      0.85      1055
+
+    accuracy                           0.85      2110
+   macro avg       0.85      0.85      0.85      2110
+weighted avg       0.85      0.85      0.85      2110
+
+BorderlineSMOTE_RF ROC-AUC: 0.9208503852114733
+BorderlineSMOTE_RF PR-AUC: 0.923271346105129
+

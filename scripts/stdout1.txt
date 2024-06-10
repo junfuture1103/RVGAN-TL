@@ -1,114 +1,92 @@
 Started testing RGAN-TL Classifier
 Distribution of the Classes in the subsample dataset
 Class
-0    284315
-1       492
+0    175
+1     17
 Name: count, dtype: int64
 Class
-0    0.998273
-1    0.001727
-Name: count, dtype: float64
-df_len :  284807
-        Time        V1        V2        V3        V4  ...       V26       V27       V28  Amount  Class
-4073  3733.0  1.326932 -0.393447  0.824760 -0.361840  ... -0.543824 -0.020655  0.025341   39.80      0
-199    132.0 -0.394816  1.054418  1.206361 -0.289232  ...  0.149368  0.287360  0.111322    3.87      0
-2517  2090.0 -0.380761  0.765901  1.251706 -1.963235  ... -0.861760  0.243324 -0.009046    1.00      0
-610    460.0 -2.400261 -1.383754  1.610151 -2.452649  ... -0.126954  0.123830  0.485189   79.00      0
-4515  3827.0  0.755792 -1.356122  0.717366 -1.418804  ... -0.866088  0.026492  0.075376  265.42      0
-
-[5 rows x 31 columns]
-Distribution of the Classes in the subsample dataset
-Class
-0    5000
-1     492
-Name: count, dtype: int64
-Class
-0    0.910415
-1    0.089585
+0    0.911458
+1    0.088542
 Name: count, dtype: float64
 ============ LGBM ============
 [LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
 [LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-[LightGBM] [Info] Number of positive: 298, number of negative: 2997
-[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000709 seconds.
-You can set `force_col_wise=true` to remove the overhead.
-[LightGBM] [Info] Total Bins 7395
-[LightGBM] [Info] Number of data points in the train set: 3295, number of used features: 29
-[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.090440 -> initscore=-2.308274
-[LightGBM] [Info] Start training from score -2.308274
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-Accuracy :  0.9117
-Precision :  0
-Recall :  0.0
-f1-score :  0
-g_mean :  0.0
-auc :  0.5
-============ START SMOTE ============
-============ DONE SMOTE ============
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-[LightGBM] [Info] Number of positive: 2997, number of negative: 2997
-[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000567 seconds.
-You can set `force_col_wise=true` to remove the overhead.
-[LightGBM] [Info] Total Bins 7395
-[LightGBM] [Info] Number of data points in the train set: 5994, number of used features: 29
-[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-Accuracy :  0.9727
-Precision :  0.7939
-Recall :  0.933
-f1-score :  0.8578
-g_mean :  0.9545
-auc :  0.9548
-============ START SMOTE ============
-============ DONE SMOTE ============
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-[LightGBM] [Info] Number of positive: 3001, number of negative: 2997
-[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000324 seconds.
-You can set `force_col_wise=true` to remove the overhead.
-[LightGBM] [Info] Total Bins 7395
-[LightGBM] [Info] Number of data points in the train set: 5998, number of used features: 29
-[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500333 -> initscore=0.001334
-[LightGBM] [Info] Start training from score 0.001334
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-Accuracy :  0.9372
-Precision :  0.5892
-Recall :  0.9536
-f1-score :  0.7284
-g_mean :  0.9446
-auc :  0.9446
-============ START SMOTE ============
-============ DONE SMOTE ============
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-[LightGBM] [Info] Number of positive: 2997, number of negative: 2997
-[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000640 seconds.
-You can set `force_col_wise=true` to remove the overhead.
-[LightGBM] [Info] Total Bins 7368
-[LightGBM] [Info] Number of data points in the train set: 5994, number of used features: 29
-[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-Accuracy :  0.9709
-Precision :  0.7851
-Recall :  0.9227
-f1-score :  0.8484
-g_mean :  0.9487
-auc :  0.9491
-============ START SMOTE ============
-============ DONE SMOTE ============
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-[LightGBM] [Info] Number of positive: 2997, number of negative: 2997
-[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000331 seconds.
-You can set `force_col_wise=true` to remove the overhead.
-[LightGBM] [Info] Total Bins 7395
-[LightGBM] [Info] Number of data points in the train set: 5994, number of used features: 29
-[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
-[LightGBM] [Warning] Accuracy may be bad since you didn't explicitly set num_leaves OR 2^max_depth > num_leaves. (num_leaves=31).
-Accuracy :  0.9618
-Precision :  0.7292
-Recall :  0.9021
-f1-score :  0.8065
-g_mean :  0.9342
-auc :  0.9348
+[LightGBM] [Info] Number of positive: 270, number of negative: 2730
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.113113 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 816
+[LightGBM] [Info] Number of data points in the train set: 3000, number of used features: 9
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.090000 -> initscore=-2.313635
+[LightGBM] [Info] Start training from score -2.313635
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+No further splits with positive gain, best gain: -inf
+No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+No further splits with positive gain, best gain: -inf

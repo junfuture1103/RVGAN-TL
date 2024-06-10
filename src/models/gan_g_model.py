@@ -7,6 +7,7 @@ import src
 class GANGModel(nn.Module):
     def __init__(self):
         super().__init__()
+        print(f"x_size: {src.models.x_size}, type: {type(src.models.x_size)}")
         self.process = nn.Sequential(
             nn.Linear(src.models.z_size, 512, bias=False),
             nn.LayerNorm(512),
