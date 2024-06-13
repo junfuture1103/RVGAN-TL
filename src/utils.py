@@ -88,13 +88,6 @@ def preprocess_arff_data(file_path):
         class_mapping = {label: idx for idx, label in enumerate(df['Class'].unique())}
         df['Class'] = df['Class'].map(class_mapping)
 
-        new_df = df
-        print('Distribution of the Classes in the subsample dataset')
-        print(new_df['Class'].value_counts())
-        print(new_df['Class'].value_counts() / len(new_df))
-
-        df = new_df
-
         # 데이터 섞기
         df = df.sample(frac=1, random_state=42)
 
@@ -168,6 +161,7 @@ def get_gan_dataset(gan: src.gans.GANLike) -> src.datasets.FullDataset:
     print("start ganfit")
     gan.fit()
     print("done ganfit")
+    
     full_dataset = src.datasets.FullDataset().to(src.config.device)
     pos_dataset = src.datasets.PositiveDataset().to(src.config.device)
     neg_dataset = src.datasets.NegativeDataset().to(src.config.device)

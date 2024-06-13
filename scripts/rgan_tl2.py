@@ -1,6 +1,7 @@
 import sys
 import os
 import pickle
+import glob
 
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
@@ -11,106 +12,117 @@ from imblearn.over_sampling import ADASYN, RandomOverSampler, BorderlineSMOTE
 # FILE_NAME = 'creditcard.csv'
 ARFF_FILE_NAME = '../data/arff/vehicle0.dat_cleaned.arff'
 
+directory = '../data/testarff/'
+arff_files = glob.glob(os.path.join(directory, '*.arff'))
+
 if __name__ == '__main__':
-    # sys.stdout = open('stdout1.txt', 'w')
 
-    print('Started testing RGAN-TL Classifier')
-    src.utils.set_random_state()
-    # src.utils.prepare_dataset(FILE_NAME)
-    src.utils.prepare_arff_dataset(ARFF_FILE_NAME)
-    
-    full_dataset = src.datasets.FullDataset()
-    test_dataset = src.datasets.FullDataset(training=False)
-    
-    # print("============ LGBM ============")
-    # src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    print("============ START SMOTE ============")
-    smote = SMOTE(random_state=42)
-    X_train_resampled, Y_train_resampled = smote.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
-    print("============ DONE SMOTE ============")
-    # src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # print("============ START SMOTE ============")
-    # ada = ADASYN(random_state=42)
-    # X_train_resampled, Y_train_resampled = ada.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
-    # print("============ DONE SMOTE ============")
-    # # src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # print("============ START SMOTE ============")
-    # ros = RandomOverSampler(random_state=42)
-    # X_train_resampled, Y_train_resampled = ros.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
-    # print("============ DONE SMOTE ============")
-    # # src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # print("============ START SMOTE ============")
-    # ros = BorderlineSMOTE(random_state=42)
-    # X_train_resampled, Y_train_resampled = ros.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
-    # print("============ DONE SMOTE ============")
-    # # src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # # sys.stdout.close()
-    # # sys.stdout = open('stdout2.txt', 'w')
-    # # jungan_dataset = src.utils.get_gan_dataset(src.gans.JUNWGANGP())
-    
-    gan_dataset = src.utils.get_gan_dataset(src.gans.GAN())
-    # wgan_dataset = src.utils.get_gan_dataset(src.gans.WGAN())
-    # wgangp_dataset = src.utils.get_gan_dataset(src.gans.WGANGP())
-    # sngan_dataset = src.utils.get_gan_dataset(src.gans.SNGAN())
-    jungan_dataset = src.utils.get_jgan_dataset(src.gans.JUNGAN())
-    
-    # with open('junganc_dataset.p', 'wb') as file:    # james.p 파일을 바이너리 쓰기 모드(wb)로 열기
-    #     pickle.dump(gan_dataset, file)
-    #     pickle.dump(wgan_dataset, file)
-    #     pickle.dump(wgangp_dataset, file)
-    #     pickle.dump(sngan_dataset, file)
+    for arff_file in arff_files:
+        
+        file_name = os.path.basename(arff_file)
 
-    # ############ GAN ############
-    print("============ RF ============")
-    src.jun_classifier.RandomForest(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    print("============ LGBM ============")
-    src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # print("============ RF with SMOTE ============")
-    src.jun_classifier.RandomForest(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+        # 확장자 제거
+        file_name_without_ext = os.path.splitext(file_name)[0]
+        sys.stdout = open('stdout_traditional_{}.txt'.format(file_name_without_ext), 'w')
 
-    # print("============ LGBM with SMOTE ============")
-    src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # # ############ GAN ############
-    # # print("============ LGBM with GAN ============")
-    # src.jun_classifier.LGBM(gan_dataset.samples, gan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # # print("============ LGBM with WGAN ============")
-    # src.jun_classifier.LGBM(wgan_dataset.samples, wgan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # # print("============ LGBM with WGANGP ============")
-    # src.jun_classifier.LGBM(wgangp_dataset.samples, wgangp_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # # print("============ LGBM with SNGANs ============")
-    # src.jun_classifier.LGBM(sngan_dataset.samples, sngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
 
-    # print("============ RF with GAN ============")
-    # src.jun_classifier.RandomForest(gan_dataset.samples, gan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # print("============ RF with WGAN ============")
-    # src.jun_classifier.RandomForest(wgan_dataset.samples, wgan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # print("============ RF with WGANGP ============")
-    # src.jun_classifier.RandomForest(wgangp_dataset.samples, wgangp_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # print("============ RF with SNGANs ============")
-    # src.jun_classifier.RandomForest(sngan_dataset.samples, sngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+        print('Started testing RGAN-TL Classifier : '+ arff_file)
+        src.utils.set_random_state()
+        # src.utils.prepare_dataset(FILE_NAME)
+        src.utils.prepare_arff_dataset(arff_file)
+        
+        full_dataset = src.datasets.FullDataset()
+        test_dataset = src.datasets.FullDataset(training=False)
+        
+        print("============ LGBM ============")
+        src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ START SMOTE ============")
+        smote = SMOTE(random_state=42)
+        X_train_resampled, Y_train_resampled = smote.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
+        print("============ DONE SMOTE ============")
+        src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ START SMOTE ============")
+        ada = ADASYN(random_state=42)
+        X_train_resampled, Y_train_resampled = ada.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
+        print("============ DONE SMOTE ============")
+        src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ START SMOTE ============")
+        ros = RandomOverSampler(random_state=42)
+        X_train_resampled, Y_train_resampled = ros.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
+        print("============ DONE SMOTE ============")
+        src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ START SMOTE ============")
+        ros = BorderlineSMOTE(random_state=42)
+        X_train_resampled, Y_train_resampled = ros.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
+        print("============ DONE SMOTE ============")
+        src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+        
+        sys.stdout.close()
+        sys.stdout = open('stdout_gan_{}.txt'.format(file_name_without_ext), 'w')
 
-    # # ############ JUNGAN ############
-    print("============ RF with JUNGAN ============")
-    src.jun_classifier.RandomForest(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    print("============ LGBM with JUNGAN ============")
-    src.jun_classifier.LGBM(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
-    
-    # sys.stdout.close()
+        sngan_dataset = src.utils.get_gan_dataset(src.gans.SNGAN())
+        gan_dataset = src.utils.get_gan_dataset(src.gans.GAN())
+        wgan_dataset = src.utils.get_gan_dataset(src.gans.WGAN())
+        wgangp_dataset = src.utils.get_gan_dataset(src.gans.WGANGP())
+        jungan_dataset = src.utils.get_jgan_dataset(src.gans.JUNGAN())
+        
+        with open('jungan_dataset_{}.p'.format(file_name_without_ext), 'wb') as file:    # james.p 파일을 바이너리 쓰기 모드(wb)로 열기
+            pickle.dump(gan_dataset, file)
+            pickle.dump(wgan_dataset, file)
+            pickle.dump(wgangp_dataset, file)
+            pickle.dump(sngan_dataset, file)
+            pickle.dump(jungan_dataset, file)
+
+        ############ GAN ############
+        print("============ RF ============")
+        src.jun_classifier.RandomForest(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ LGBM ============")
+        src.jun_classifier.LGBM(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ RF with SMOTE ============")
+        src.jun_classifier.RandomForest(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+
+        print("============ LGBM with SMOTE ============")
+        src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
+        
+        # ############ GAN ############
+        print("============ LGBM with GAN ============")
+        src.jun_classifier.LGBM(gan_dataset.samples, gan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        # print("============ LGBM with WGAN ============")
+        src.jun_classifier.LGBM(wgan_dataset.samples, wgan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        # print("============ LGBM with WGANGP ============")
+        src.jun_classifier.LGBM(wgangp_dataset.samples, wgangp_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ LGBM with SNGANs ============")
+        src.jun_classifier.LGBM(sngan_dataset.samples, sngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+
+        print("============ RF with GAN ============")
+        src.jun_classifier.RandomForest(gan_dataset.samples, gan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ RF with WGAN ============")
+        src.jun_classifier.RandomForest(wgan_dataset.samples, wgan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ RF with WGANGP ============")
+        src.jun_classifier.RandomForest(wgangp_dataset.samples, wgangp_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ RF with SNGANs ============")
+        src.jun_classifier.RandomForest(sngan_dataset.samples, sngan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+
+        # ############ JUNGAN ############
+        print("============ RF with JUNGAN ============")
+        src.jun_classifier.RandomForest(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ LGBM with JUNGAN ============")
+        src.jun_classifier.LGBM(jungan_dataset.samples, jungan_dataset.labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        sys.stdout.close()
 
 
     # sys.stdout = open('stdout3.txt', 'w')

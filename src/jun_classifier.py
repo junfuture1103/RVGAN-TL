@@ -48,7 +48,7 @@ def RandomForest(x_train, y_train, x_test, y_test):
 
 def LGBM(x_train, y_train, x_test, y_test):
     # modeling
-    model_lgbm = lgb.LGBMClassifier(n_estimators=15)
+    model_lgbm = lgb.LGBMClassifier(n_estimators=15, force_col_wise= True)
     # train
     model_lgbm.fit(x_train, y_train)
 
