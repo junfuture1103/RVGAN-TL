@@ -1,0 +1,1633 @@
+start ganfit
+done ganfit
+x_size: 8, type: <class 'int'>
+start ganfit
+done ganfit
+x_size: 8, type: <class 'int'>
+start ganfit
+done ganfit
+x_size: 8, type: <class 'int'>
+start ganfit
+done ganfit
+x_size: 8, type: <class 'int'>
+update the number of positive samples
+total_post_cnt : 259
+total_neg_cnt : 632
+TIME : 0.00347137451171875
+update the number of positive samples
+total_post_cnt : 260
+total_neg_cnt : 632
+TIME : 0.003231048583984375
+update the number of positive samples
+total_post_cnt : 261
+total_neg_cnt : 632
+TIME : 0.0044345855712890625
+update the number of positive samples
+total_post_cnt : 262
+total_neg_cnt : 632
+TIME : 0.005286693572998047
+update the number of positive samples
+total_post_cnt : 263
+total_neg_cnt : 632
+TIME : 0.005258083343505859
+update the number of positive samples
+total_post_cnt : 264
+total_neg_cnt : 632
+TIME : 0.005408525466918945
+update the number of positive samples
+total_post_cnt : 265
+total_neg_cnt : 632
+TIME : 0.005411863327026367
+update the number of positive samples
+total_post_cnt : 266
+total_neg_cnt : 632
+TIME : 0.005203723907470703
+update the number of positive samples
+total_post_cnt : 267
+total_neg_cnt : 632
+TIME : 0.005394697189331055
+update the number of positive samples
+total_post_cnt : 268
+total_neg_cnt : 632
+TIME : 0.0051114559173583984
+update the number of positive samples
+total_post_cnt : 269
+total_neg_cnt : 632
+TIME : 0.005147695541381836
+update the number of positive samples
+total_post_cnt : 270
+total_neg_cnt : 632
+TIME : 0.005483388900756836
+update the number of positive samples
+total_post_cnt : 271
+total_neg_cnt : 632
+TIME : 0.005226850509643555
+update the number of positive samples
+total_post_cnt : 272
+total_neg_cnt : 632
+TIME : 0.005350828170776367
+update the number of positive samples
+total_post_cnt : 273
+total_neg_cnt : 632
+TIME : 0.005132436752319336
+update the number of positive samples
+total_post_cnt : 274
+total_neg_cnt : 632
+TIME : 0.00514984130859375
+update the number of positive samples
+total_post_cnt : 275
+total_neg_cnt : 632
+TIME : 0.005152225494384766
+update the number of positive samples
+total_post_cnt : 276
+total_neg_cnt : 632
+TIME : 0.005098581314086914
+update the number of positive samples
+total_post_cnt : 277
+total_neg_cnt : 632
+TIME : 0.005106687545776367
+update the number of positive samples
+total_post_cnt : 278
+total_neg_cnt : 632
+TIME : 0.005102872848510742
+update the number of positive samples
+total_post_cnt : 279
+total_neg_cnt : 632
+TIME : 0.005179405212402344
+update the number of positive samples
+total_post_cnt : 280
+total_neg_cnt : 632
+TIME : 0.005176544189453125
+update the number of positive samples
+total_post_cnt : 281
+total_neg_cnt : 632
+TIME : 0.00514531135559082
+update the number of positive samples
+total_post_cnt : 282
+total_neg_cnt : 632
+TIME : 0.005091667175292969
+update the number of positive samples
+total_post_cnt : 283
+total_neg_cnt : 632
+TIME : 0.005138874053955078
+update the number of positive samples
+total_post_cnt : 284
+total_neg_cnt : 632
+TIME : 0.005314350128173828
+update the number of positive samples
+total_post_cnt : 285
+total_neg_cnt : 632
+TIME : 0.005130290985107422
+update the number of positive samples
+total_post_cnt : 286
+total_neg_cnt : 632
+TIME : 0.005120992660522461
+update the number of positive samples
+total_post_cnt : 287
+total_neg_cnt : 632
+TIME : 0.005353450775146484
+update the number of positive samples
+total_post_cnt : 288
+total_neg_cnt : 632
+TIME : 0.005247354507446289
+update the number of positive samples
+total_post_cnt : 289
+total_neg_cnt : 632
+TIME : 0.005181312561035156
+update the number of positive samples
+total_post_cnt : 290
+total_neg_cnt : 632
+TIME : 0.005215883255004883
+update the number of positive samples
+total_post_cnt : 291
+total_neg_cnt : 632
+TIME : 0.005177974700927734
+update the number of positive samples
+total_post_cnt : 292
+total_neg_cnt : 632
+TIME : 0.005197048187255859
+update the number of positive samples
+total_post_cnt : 293
+total_neg_cnt : 632
+TIME : 0.003503084182739258
+update the number of positive samples
+total_post_cnt : 294
+total_neg_cnt : 632
+TIME : 0.0032529830932617188
+update the number of positive samples
+total_post_cnt : 295
+total_neg_cnt : 632
+TIME : 0.003334522247314453
+update the number of positive samples
+total_post_cnt : 296
+total_neg_cnt : 632
+TIME : 0.0032405853271484375
+update the number of positive samples
+total_post_cnt : 297
+total_neg_cnt : 632
+TIME : 0.0034720897674560547
+update the number of positive samples
+total_post_cnt : 298
+total_neg_cnt : 632
+TIME : 0.005099773406982422
+update the number of positive samples
+total_post_cnt : 299
+total_neg_cnt : 632
+TIME : 0.005249977111816406
+update the number of positive samples
+total_post_cnt : 300
+total_neg_cnt : 632
+TIME : 0.005225658416748047
+update the number of positive samples
+total_post_cnt : 301
+total_neg_cnt : 632
+TIME : 0.005217075347900391
+update the number of positive samples
+total_post_cnt : 302
+total_neg_cnt : 632
+TIME : 0.005256175994873047
+update the number of positive samples
+total_post_cnt : 303
+total_neg_cnt : 632
+TIME : 0.005225419998168945
+update the number of positive samples
+total_post_cnt : 304
+total_neg_cnt : 632
+TIME : 0.005218982696533203
+update the number of positive samples
+total_post_cnt : 305
+total_neg_cnt : 632
+TIME : 0.005237579345703125
+update the number of positive samples
+total_post_cnt : 306
+total_neg_cnt : 632
+TIME : 0.004349946975708008
+update the number of positive samples
+total_post_cnt : 307
+total_neg_cnt : 632
+TIME : 0.003231048583984375
+update the number of positive samples
+total_post_cnt : 308
+total_neg_cnt : 632
+TIME : 0.003393888473510742
+update the number of positive samples
+total_post_cnt : 309
+total_neg_cnt : 632
+TIME : 0.003367185592651367
+update the number of positive samples
+total_post_cnt : 310
+total_neg_cnt : 632
+TIME : 0.0031626224517822266
+update the number of positive samples
+total_post_cnt : 311
+total_neg_cnt : 632
+TIME : 0.005074977874755859
+update the number of positive samples
+total_post_cnt : 312
+total_neg_cnt : 632
+TIME : 0.005125522613525391
+update the number of positive samples
+total_post_cnt : 313
+total_neg_cnt : 632
+TIME : 0.005431413650512695
+update the number of positive samples
+total_post_cnt : 314
+total_neg_cnt : 632
+TIME : 0.003954648971557617
+update the number of positive samples
+total_post_cnt : 315
+total_neg_cnt : 632
+TIME : 0.0032296180725097656
+update the number of positive samples
+total_post_cnt : 316
+total_neg_cnt : 632
+TIME : 0.0033006668090820312
+update the number of positive samples
+total_post_cnt : 317
+total_neg_cnt : 632
+TIME : 0.0046575069427490234
+update the number of positive samples
+total_post_cnt : 318
+total_neg_cnt : 632
+TIME : 0.003241300582885742
+update the number of positive samples
+total_post_cnt : 319
+total_neg_cnt : 632
+TIME : 0.0031502246856689453
+update the number of positive samples
+total_post_cnt : 320
+total_neg_cnt : 632
+TIME : 0.0032193660736083984
+update the number of positive samples
+total_post_cnt : 321
+total_neg_cnt : 632
+TIME : 0.0032739639282226562
+update the number of positive samples
+total_post_cnt : 322
+total_neg_cnt : 632
+TIME : 0.0038471221923828125
+update the number of positive samples
+total_post_cnt : 323
+total_neg_cnt : 632
+TIME : 0.005140066146850586
+update the number of positive samples
+total_post_cnt : 324
+total_neg_cnt : 632
+TIME : 0.005149126052856445
+update the number of positive samples
+total_post_cnt : 325
+total_neg_cnt : 632
+TIME : 0.004748106002807617
+update the number of positive samples
+total_post_cnt : 326
+total_neg_cnt : 632
+TIME : 0.0031974315643310547
+update the number of positive samples
+total_post_cnt : 327
+total_neg_cnt : 632
+TIME : 0.0032401084899902344
+update the number of positive samples
+total_post_cnt : 328
+total_neg_cnt : 632
+TIME : 0.003252267837524414
+update the number of positive samples
+total_post_cnt : 329
+total_neg_cnt : 632
+TIME : 0.0032618045806884766
+update the number of positive samples
+total_post_cnt : 330
+total_neg_cnt : 632
+TIME : 0.004072666168212891
+update the number of positive samples
+total_post_cnt : 331
+total_neg_cnt : 632
+TIME : 0.005178689956665039
+update the number of positive samples
+total_post_cnt : 332
+total_neg_cnt : 632
+TIME : 0.005083560943603516
+update the number of positive samples
+total_post_cnt : 333
+total_neg_cnt : 632
+TIME : 0.005414485931396484
+update the number of positive samples
+total_post_cnt : 334
+total_neg_cnt : 632
+TIME : 0.005299568176269531
+update the number of positive samples
+total_post_cnt : 335
+total_neg_cnt : 632
+TIME : 0.005171537399291992
+update the number of positive samples
+total_post_cnt : 336
+total_neg_cnt : 632
+TIME : 0.005316257476806641
+update the number of positive samples
+total_post_cnt : 337
+total_neg_cnt : 632
+TIME : 0.005139827728271484
+update the number of positive samples
+total_post_cnt : 338
+total_neg_cnt : 632
+TIME : 0.005106925964355469
+update the number of positive samples
+total_post_cnt : 339
+total_neg_cnt : 632
+TIME : 0.0033631324768066406
+update the number of positive samples
+total_post_cnt : 340
+total_neg_cnt : 632
+TIME : 0.003236055374145508
+update the number of positive samples
+total_post_cnt : 341
+total_neg_cnt : 632
+TIME : 0.0033028125762939453
+update the number of positive samples
+total_post_cnt : 342
+total_neg_cnt : 632
+TIME : 0.0032041072845458984
+update the number of positive samples
+total_post_cnt : 343
+total_neg_cnt : 632
+TIME : 0.0041506290435791016
+update the number of positive samples
+total_post_cnt : 344
+total_neg_cnt : 632
+TIME : 0.00518798828125
+update the number of positive samples
+total_post_cnt : 345
+total_neg_cnt : 632
+TIME : 0.005145549774169922
+update the number of positive samples
+total_post_cnt : 346
+total_neg_cnt : 632
+TIME : 0.0051305294036865234
+update the number of positive samples
+total_post_cnt : 347
+total_neg_cnt : 632
+TIME : 0.00510406494140625
+update the number of positive samples
+total_post_cnt : 348
+total_neg_cnt : 632
+TIME : 0.005157470703125
+update the number of positive samples
+total_post_cnt : 349
+total_neg_cnt : 632
+TIME : 0.005125999450683594
+update the number of positive samples
+total_post_cnt : 350
+total_neg_cnt : 632
+TIME : 0.005730867385864258
+update the number of positive samples
+total_post_cnt : 351
+total_neg_cnt : 632
+TIME : 0.005154132843017578
+update the number of positive samples
+total_post_cnt : 352
+total_neg_cnt : 632
+TIME : 0.005131959915161133
+update the number of positive samples
+total_post_cnt : 353
+total_neg_cnt : 632
+TIME : 0.0051538944244384766
+update the number of positive samples
+total_post_cnt : 354
+total_neg_cnt : 632
+TIME : 0.005097866058349609
+update the number of positive samples
+total_post_cnt : 355
+total_neg_cnt : 632
+TIME : 0.005370378494262695
+update the number of positive samples
+total_post_cnt : 356
+total_neg_cnt : 632
+TIME : 0.005220174789428711
+update the number of positive samples
+total_post_cnt : 357
+total_neg_cnt : 632
+TIME : 0.005117177963256836
+update the number of positive samples
+total_post_cnt : 358
+total_neg_cnt : 632
+TIME : 0.0051593780517578125
+update the number of positive samples
+total_post_cnt : 359
+total_neg_cnt : 632
+TIME : 0.005131721496582031
+update the number of positive samples
+total_post_cnt : 360
+total_neg_cnt : 632
+TIME : 0.0052297115325927734
+update the number of positive samples
+total_post_cnt : 361
+total_neg_cnt : 632
+TIME : 0.00524592399597168
+update the number of positive samples
+total_post_cnt : 362
+total_neg_cnt : 632
+TIME : 0.005102634429931641
+update the number of positive samples
+total_post_cnt : 363
+total_neg_cnt : 632
+TIME : 0.005206584930419922
+update the number of positive samples
+total_post_cnt : 364
+total_neg_cnt : 632
+TIME : 0.005179882049560547
+update the number of positive samples
+total_post_cnt : 365
+total_neg_cnt : 632
+TIME : 0.0051403045654296875
+update the number of positive samples
+total_post_cnt : 366
+total_neg_cnt : 632
+TIME : 0.005242109298706055
+update the number of positive samples
+total_post_cnt : 367
+total_neg_cnt : 632
+TIME : 0.003713846206665039
+update the number of positive samples
+total_post_cnt : 368
+total_neg_cnt : 632
+TIME : 0.0033180713653564453
+update the number of positive samples
+total_post_cnt : 369
+total_neg_cnt : 632
+TIME : 0.0031986236572265625
+update the number of positive samples
+total_post_cnt : 370
+total_neg_cnt : 632
+TIME : 0.003304719924926758
+update the number of positive samples
+total_post_cnt : 371
+total_neg_cnt : 632
+TIME : 0.0034623146057128906
+update the number of positive samples
+total_post_cnt : 372
+total_neg_cnt : 632
+TIME : 0.0031261444091796875
+update the number of positive samples
+total_post_cnt : 373
+total_neg_cnt : 632
+TIME : 0.003269195556640625
+update the number of positive samples
+total_post_cnt : 374
+total_neg_cnt : 632
+TIME : 0.003239154815673828
+update the number of positive samples
+total_post_cnt : 375
+total_neg_cnt : 632
+TIME : 0.0032494068145751953
+update the number of positive samples
+total_post_cnt : 376
+total_neg_cnt : 632
+TIME : 0.0032210350036621094
+update the number of positive samples
+total_post_cnt : 377
+total_neg_cnt : 632
+TIME : 0.003261566162109375
+update the number of positive samples
+total_post_cnt : 378
+total_neg_cnt : 632
+TIME : 0.0031828880310058594
+update the number of positive samples
+total_post_cnt : 379
+total_neg_cnt : 632
+TIME : 0.003106355667114258
+update the number of positive samples
+total_post_cnt : 380
+total_neg_cnt : 632
+TIME : 0.003595113754272461
+update the number of positive samples
+total_post_cnt : 381
+total_neg_cnt : 632
+TIME : 0.005159854888916016
+update the number of positive samples
+total_post_cnt : 382
+total_neg_cnt : 632
+TIME : 0.005191802978515625
+update the number of positive samples
+total_post_cnt : 383
+total_neg_cnt : 632
+TIME : 0.005623817443847656
+update the number of positive samples
+total_post_cnt : 384
+total_neg_cnt : 632
+TIME : 0.004441022872924805
+update the number of positive samples
+total_post_cnt : 385
+total_neg_cnt : 632
+TIME : 0.0032749176025390625
+update the number of positive samples
+total_post_cnt : 386
+total_neg_cnt : 632
+TIME : 0.0033364295959472656
+update the number of positive samples
+total_post_cnt : 387
+total_neg_cnt : 632
+TIME : 0.0034873485565185547
+update the number of positive samples
+total_post_cnt : 388
+total_neg_cnt : 632
+TIME : 0.0031566619873046875
+update the number of positive samples
+total_post_cnt : 389
+total_neg_cnt : 632
+TIME : 0.00316619873046875
+update the number of positive samples
+total_post_cnt : 390
+total_neg_cnt : 632
+TIME : 0.003638744354248047
+update the number of positive samples
+total_post_cnt : 391
+total_neg_cnt : 632
+TIME : 0.005246639251708984
+update the number of positive samples
+total_post_cnt : 392
+total_neg_cnt : 632
+TIME : 0.005136251449584961
+update the number of positive samples
+total_post_cnt : 393
+total_neg_cnt : 632
+TIME : 0.005160808563232422
+update the number of positive samples
+total_post_cnt : 394
+total_neg_cnt : 632
+TIME : 0.0052449703216552734
+update the number of positive samples
+total_post_cnt : 395
+total_neg_cnt : 632
+TIME : 0.005195140838623047
+update the number of positive samples
+total_post_cnt : 396
+total_neg_cnt : 632
+TIME : 0.00511479377746582
+update the number of positive samples
+total_post_cnt : 397
+total_neg_cnt : 632
+TIME : 0.005135059356689453
+update the number of positive samples
+total_post_cnt : 398
+total_neg_cnt : 632
+TIME : 0.005087137222290039
+update the number of positive samples
+total_post_cnt : 399
+total_neg_cnt : 632
+TIME : 0.0051462650299072266
+update the number of positive samples
+total_post_cnt : 400
+total_neg_cnt : 632
+TIME : 0.004433155059814453
+update the number of positive samples
+total_post_cnt : 401
+total_neg_cnt : 632
+TIME : 0.003214120864868164
+update the number of positive samples
+total_post_cnt : 402
+total_neg_cnt : 632
+TIME : 0.0032355785369873047
+update the number of positive samples
+total_post_cnt : 403
+total_neg_cnt : 632
+TIME : 0.003153562545776367
+update the number of positive samples
+total_post_cnt : 404
+total_neg_cnt : 632
+TIME : 0.003192424774169922
+update the number of positive samples
+total_post_cnt : 405
+total_neg_cnt : 632
+TIME : 0.00487518310546875
+update the number of positive samples
+total_post_cnt : 406
+total_neg_cnt : 632
+TIME : 0.005096435546875
+update the number of positive samples
+total_post_cnt : 407
+total_neg_cnt : 632
+TIME : 0.00507044792175293
+update the number of positive samples
+total_post_cnt : 408
+total_neg_cnt : 632
+TIME : 0.0052869319915771484
+update the number of positive samples
+total_post_cnt : 409
+total_neg_cnt : 632
+TIME : 0.005114316940307617
+update the number of positive samples
+total_post_cnt : 410
+total_neg_cnt : 632
+TIME : 0.005209684371948242
+update the number of positive samples
+total_post_cnt : 411
+total_neg_cnt : 632
+TIME : 0.005194902420043945
+update the number of positive samples
+total_post_cnt : 412
+total_neg_cnt : 632
+TIME : 0.005125284194946289
+update the number of positive samples
+total_post_cnt : 413
+total_neg_cnt : 632
+TIME : 0.005290985107421875
+update the number of positive samples
+total_post_cnt : 414
+total_neg_cnt : 632
+TIME : 0.005147695541381836
+update the number of positive samples
+total_post_cnt : 415
+total_neg_cnt : 632
+TIME : 0.005168914794921875
+update the number of positive samples
+total_post_cnt : 416
+total_neg_cnt : 632
+TIME : 0.005228519439697266
+update the number of positive samples
+total_post_cnt : 417
+total_neg_cnt : 632
+TIME : 0.003941774368286133
+update the number of positive samples
+total_post_cnt : 418
+total_neg_cnt : 632
+TIME : 0.0032300949096679688
+update the number of positive samples
+total_post_cnt : 419
+total_neg_cnt : 632
+TIME : 0.003261566162109375
+update the number of positive samples
+total_post_cnt : 420
+total_neg_cnt : 632
+TIME : 0.0031087398529052734
+update the number of positive samples
+total_post_cnt : 421
+total_neg_cnt : 632
+TIME : 0.0037839412689208984
+update the number of positive samples
+total_post_cnt : 422
+total_neg_cnt : 632
+TIME : 0.0032341480255126953
+update the number of positive samples
+total_post_cnt : 423
+total_neg_cnt : 632
+TIME : 0.0032622814178466797
+update the number of positive samples
+total_post_cnt : 424
+total_neg_cnt : 632
+TIME : 0.00316619873046875
+update the number of positive samples
+total_post_cnt : 425
+total_neg_cnt : 632
+TIME : 0.003426790237426758
+update the number of positive samples
+total_post_cnt : 426
+total_neg_cnt : 632
+TIME : 0.0032355785369873047
+update the number of positive samples
+total_post_cnt : 427
+total_neg_cnt : 632
+TIME : 0.0032317638397216797
+update the number of positive samples
+total_post_cnt : 428
+total_neg_cnt : 632
+TIME : 0.003178119659423828
+update the number of positive samples
+total_post_cnt : 429
+total_neg_cnt : 632
+TIME : 0.0031769275665283203
+update the number of positive samples
+total_post_cnt : 430
+total_neg_cnt : 632
+TIME : 0.0037348270416259766
+update the number of positive samples
+total_post_cnt : 431
+total_neg_cnt : 632
+TIME : 0.0031235218048095703
+update the number of positive samples
+total_post_cnt : 432
+total_neg_cnt : 632
+TIME : 0.0032117366790771484
+update the number of positive samples
+total_post_cnt : 433
+total_neg_cnt : 632
+TIME : 0.0038347244262695312
+update the number of positive samples
+total_post_cnt : 434
+total_neg_cnt : 632
+TIME : 0.005267620086669922
+update the number of positive samples
+total_post_cnt : 435
+total_neg_cnt : 632
+TIME : 0.0044286251068115234
+update the number of positive samples
+total_post_cnt : 436
+total_neg_cnt : 632
+TIME : 0.0033295154571533203
+update the number of positive samples
+total_post_cnt : 437
+total_neg_cnt : 632
+TIME : 0.005196809768676758
+update the number of positive samples
+total_post_cnt : 438
+total_neg_cnt : 632
+TIME : 0.005107879638671875
+update the number of positive samples
+total_post_cnt : 439
+total_neg_cnt : 632
+TIME : 0.005184650421142578
+update the number of positive samples
+total_post_cnt : 440
+total_neg_cnt : 632
+TIME : 0.006563425064086914
+update the number of positive samples
+total_post_cnt : 441
+total_neg_cnt : 632
+TIME : 0.005121469497680664
+update the number of positive samples
+total_post_cnt : 442
+total_neg_cnt : 632
+TIME : 0.0050907135009765625
+update the number of positive samples
+total_post_cnt : 443
+total_neg_cnt : 632
+TIME : 0.005202054977416992
+update the number of positive samples
+total_post_cnt : 444
+total_neg_cnt : 632
+TIME : 0.0031719207763671875
+update the number of positive samples
+total_post_cnt : 445
+total_neg_cnt : 632
+TIME : 0.003319978713989258
+update the number of positive samples
+total_post_cnt : 446
+total_neg_cnt : 632
+TIME : 0.004000186920166016
+update the number of positive samples
+total_post_cnt : 447
+total_neg_cnt : 632
+TIME : 0.005284309387207031
+update the number of positive samples
+total_post_cnt : 448
+total_neg_cnt : 632
+TIME : 0.005186557769775391
+update the number of positive samples
+total_post_cnt : 449
+total_neg_cnt : 632
+TIME : 0.005101680755615234
+update the number of positive samples
+total_post_cnt : 450
+total_neg_cnt : 632
+TIME : 0.00420689582824707
+update the number of positive samples
+total_post_cnt : 451
+total_neg_cnt : 632
+TIME : 0.005204200744628906
+update the number of positive samples
+total_post_cnt : 452
+total_neg_cnt : 632
+TIME : 0.00521087646484375
+update the number of positive samples
+total_post_cnt : 453
+total_neg_cnt : 632
+TIME : 0.005250692367553711
+update the number of positive samples
+total_post_cnt : 454
+total_neg_cnt : 632
+TIME : 0.005105257034301758
+update the number of positive samples
+total_post_cnt : 455
+total_neg_cnt : 632
+TIME : 0.0051555633544921875
+update the number of positive samples
+total_post_cnt : 456
+total_neg_cnt : 632
+TIME : 0.005400896072387695
+update the number of positive samples
+total_post_cnt : 457
+total_neg_cnt : 632
+TIME : 0.0050601959228515625
+update the number of positive samples
+total_post_cnt : 458
+total_neg_cnt : 632
+TIME : 0.005194664001464844
+update the number of positive samples
+total_post_cnt : 459
+total_neg_cnt : 632
+TIME : 0.004811286926269531
+update the number of positive samples
+total_post_cnt : 460
+total_neg_cnt : 632
+TIME : 0.005010128021240234
+update the number of positive samples
+total_post_cnt : 461
+total_neg_cnt : 632
+TIME : 0.003190279006958008
+update the number of positive samples
+total_post_cnt : 462
+total_neg_cnt : 632
+TIME : 0.0030770301818847656
+update the number of positive samples
+total_post_cnt : 463
+total_neg_cnt : 632
+TIME : 0.005296468734741211
+update the number of positive samples
+total_post_cnt : 464
+total_neg_cnt : 632
+TIME : 0.005157947540283203
+update the number of positive samples
+total_post_cnt : 465
+total_neg_cnt : 632
+TIME : 0.005234718322753906
+update the number of positive samples
+total_post_cnt : 466
+total_neg_cnt : 632
+TIME : 0.004654884338378906
+update the number of positive samples
+total_post_cnt : 467
+total_neg_cnt : 632
+TIME : 0.005244255065917969
+update the number of positive samples
+total_post_cnt : 468
+total_neg_cnt : 632
+TIME : 0.005177974700927734
+update the number of positive samples
+total_post_cnt : 469
+total_neg_cnt : 632
+TIME : 0.005240917205810547
+update the number of positive samples
+total_post_cnt : 470
+total_neg_cnt : 632
+TIME : 0.005135297775268555
+update the number of positive samples
+total_post_cnt : 471
+total_neg_cnt : 632
+TIME : 0.0053021907806396484
+update the number of positive samples
+total_post_cnt : 472
+total_neg_cnt : 632
+TIME : 0.005185842514038086
+update the number of positive samples
+total_post_cnt : 473
+total_neg_cnt : 632
+TIME : 0.005244731903076172
+update the number of positive samples
+total_post_cnt : 474
+total_neg_cnt : 632
+TIME : 0.005173206329345703
+update the number of positive samples
+total_post_cnt : 475
+total_neg_cnt : 632
+TIME : 0.005177497863769531
+update the number of positive samples
+total_post_cnt : 476
+total_neg_cnt : 632
+TIME : 0.005128622055053711
+update the number of positive samples
+total_post_cnt : 477
+total_neg_cnt : 632
+TIME : 0.004877567291259766
+update the number of positive samples
+total_post_cnt : 478
+total_neg_cnt : 632
+TIME : 0.0032203197479248047
+update the number of positive samples
+total_post_cnt : 479
+total_neg_cnt : 632
+TIME : 0.0033011436462402344
+update the number of positive samples
+total_post_cnt : 480
+total_neg_cnt : 632
+TIME : 0.003225088119506836
+update the number of positive samples
+total_post_cnt : 481
+total_neg_cnt : 632
+TIME : 0.0031371116638183594
+update the number of positive samples
+total_post_cnt : 482
+total_neg_cnt : 632
+TIME : 0.0042629241943359375
+update the number of positive samples
+total_post_cnt : 483
+total_neg_cnt : 632
+TIME : 0.005173683166503906
+update the number of positive samples
+total_post_cnt : 484
+total_neg_cnt : 632
+TIME : 0.005162954330444336
+update the number of positive samples
+total_post_cnt : 485
+total_neg_cnt : 632
+TIME : 0.005364418029785156
+update the number of positive samples
+total_post_cnt : 486
+total_neg_cnt : 632
+TIME : 0.0052661895751953125
+update the number of positive samples
+total_post_cnt : 487
+total_neg_cnt : 632
+TIME : 0.005242347717285156
+update the number of positive samples
+total_post_cnt : 488
+total_neg_cnt : 632
+TIME : 0.005437135696411133
+update the number of positive samples
+total_post_cnt : 489
+total_neg_cnt : 632
+TIME : 0.005264759063720703
+update the number of positive samples
+total_post_cnt : 490
+total_neg_cnt : 632
+TIME : 0.005422353744506836
+update the number of positive samples
+total_post_cnt : 491
+total_neg_cnt : 632
+TIME : 0.0037474632263183594
+update the number of positive samples
+total_post_cnt : 492
+total_neg_cnt : 632
+TIME : 0.0033490657806396484
+update the number of positive samples
+total_post_cnt : 493
+total_neg_cnt : 632
+TIME : 0.003139019012451172
+update the number of positive samples
+total_post_cnt : 494
+total_neg_cnt : 632
+TIME : 0.003214597702026367
+update the number of positive samples
+total_post_cnt : 495
+total_neg_cnt : 632
+TIME : 0.004749774932861328
+update the number of positive samples
+total_post_cnt : 496
+total_neg_cnt : 632
+TIME : 0.0052678585052490234
+update the number of positive samples
+total_post_cnt : 497
+total_neg_cnt : 632
+TIME : 0.005151987075805664
+update the number of positive samples
+total_post_cnt : 498
+total_neg_cnt : 632
+TIME : 0.005568027496337891
+update the number of positive samples
+total_post_cnt : 499
+total_neg_cnt : 632
+TIME : 0.003355741500854492
+update the number of positive samples
+total_post_cnt : 500
+total_neg_cnt : 632
+TIME : 0.003318309783935547
+update the number of positive samples
+total_post_cnt : 501
+total_neg_cnt : 632
+TIME : 0.003237009048461914
+update the number of positive samples
+total_post_cnt : 502
+total_neg_cnt : 632
+TIME : 0.0034592151641845703
+update the number of positive samples
+total_post_cnt : 503
+total_neg_cnt : 632
+TIME : 0.0032050609588623047
+update the number of positive samples
+total_post_cnt : 504
+total_neg_cnt : 632
+TIME : 0.003214597702026367
+update the number of positive samples
+total_post_cnt : 505
+total_neg_cnt : 632
+TIME : 0.0031981468200683594
+update the number of positive samples
+total_post_cnt : 506
+total_neg_cnt : 632
+TIME : 0.003495931625366211
+update the number of positive samples
+total_post_cnt : 507
+total_neg_cnt : 632
+TIME : 0.005217313766479492
+update the number of positive samples
+total_post_cnt : 508
+total_neg_cnt : 632
+TIME : 0.005139350891113281
+update the number of positive samples
+total_post_cnt : 509
+total_neg_cnt : 632
+TIME : 0.005264997482299805
+update the number of positive samples
+total_post_cnt : 510
+total_neg_cnt : 632
+TIME : 0.005120515823364258
+update the number of positive samples
+total_post_cnt : 511
+total_neg_cnt : 632
+TIME : 0.003286123275756836
+update the number of positive samples
+total_post_cnt : 512
+total_neg_cnt : 632
+TIME : 0.0032138824462890625
+update the number of positive samples
+total_post_cnt : 513
+total_neg_cnt : 632
+TIME : 0.0039484500885009766
+update the number of positive samples
+total_post_cnt : 514
+total_neg_cnt : 632
+TIME : 0.005273580551147461
+update the number of positive samples
+total_post_cnt : 515
+total_neg_cnt : 632
+TIME : 0.0051267147064208984
+update the number of positive samples
+total_post_cnt : 516
+total_neg_cnt : 632
+TIME : 0.005652189254760742
+update the number of positive samples
+total_post_cnt : 517
+total_neg_cnt : 632
+TIME : 0.00516200065612793
+update the number of positive samples
+total_post_cnt : 518
+total_neg_cnt : 632
+TIME : 0.00522160530090332
+update the number of positive samples
+total_post_cnt : 519
+total_neg_cnt : 632
+TIME : 0.004101991653442383
+update the number of positive samples
+total_post_cnt : 520
+total_neg_cnt : 632
+TIME : 0.0032808780670166016
+update the number of positive samples
+total_post_cnt : 521
+total_neg_cnt : 632
+TIME : 0.0032804012298583984
+update the number of positive samples
+total_post_cnt : 522
+total_neg_cnt : 632
+TIME : 0.0033435821533203125
+update the number of positive samples
+total_post_cnt : 523
+total_neg_cnt : 632
+TIME : 0.003519773483276367
+update the number of positive samples
+total_post_cnt : 524
+total_neg_cnt : 632
+TIME : 0.005190372467041016
+update the number of positive samples
+total_post_cnt : 525
+total_neg_cnt : 632
+TIME : 0.005146980285644531
+update the number of positive samples
+total_post_cnt : 526
+total_neg_cnt : 632
+TIME : 0.005313873291015625
+update the number of positive samples
+total_post_cnt : 527
+total_neg_cnt : 632
+TIME : 0.0033392906188964844
+update the number of positive samples
+total_post_cnt : 528
+total_neg_cnt : 632
+TIME : 0.003299713134765625
+update the number of positive samples
+total_post_cnt : 529
+total_neg_cnt : 632
+TIME : 0.003215789794921875
+update the number of positive samples
+total_post_cnt : 530
+total_neg_cnt : 632
+TIME : 0.003321409225463867
+update the number of positive samples
+total_post_cnt : 531
+total_neg_cnt : 632
+TIME : 0.0033817291259765625
+update the number of positive samples
+total_post_cnt : 532
+total_neg_cnt : 632
+TIME : 0.003222227096557617
+update the number of positive samples
+total_post_cnt : 533
+total_neg_cnt : 632
+TIME : 0.003165721893310547
+update the number of positive samples
+total_post_cnt : 534
+total_neg_cnt : 632
+TIME : 0.003223419189453125
+update the number of positive samples
+total_post_cnt : 535
+total_neg_cnt : 632
+TIME : 0.003311634063720703
+update the number of positive samples
+total_post_cnt : 536
+total_neg_cnt : 632
+TIME : 0.0032949447631835938
+update the number of positive samples
+total_post_cnt : 537
+total_neg_cnt : 632
+TIME : 0.0031766891479492188
+update the number of positive samples
+total_post_cnt : 538
+total_neg_cnt : 632
+TIME : 0.003246784210205078
+update the number of positive samples
+total_post_cnt : 539
+total_neg_cnt : 632
+TIME : 0.0032434463500976562
+update the number of positive samples
+total_post_cnt : 540
+total_neg_cnt : 632
+TIME : 0.0033164024353027344
+update the number of positive samples
+total_post_cnt : 541
+total_neg_cnt : 632
+TIME : 0.0031821727752685547
+update the number of positive samples
+total_post_cnt : 542
+total_neg_cnt : 632
+TIME : 0.003242969512939453
+update the number of positive samples
+total_post_cnt : 543
+total_neg_cnt : 632
+TIME : 0.003186941146850586
+update the number of positive samples
+total_post_cnt : 544
+total_neg_cnt : 632
+TIME : 0.0032684803009033203
+update the number of positive samples
+total_post_cnt : 545
+total_neg_cnt : 632
+TIME : 0.003392457962036133
+update the number of positive samples
+total_post_cnt : 546
+total_neg_cnt : 632
+TIME : 0.0032629966735839844
+update the number of positive samples
+total_post_cnt : 547
+total_neg_cnt : 632
+TIME : 0.0032150745391845703
+update the number of positive samples
+total_post_cnt : 548
+total_neg_cnt : 632
+TIME : 0.003189563751220703
+update the number of positive samples
+total_post_cnt : 549
+total_neg_cnt : 632
+TIME : 0.004050016403198242
+update the number of positive samples
+total_post_cnt : 550
+total_neg_cnt : 632
+TIME : 0.0057010650634765625
+update the number of positive samples
+total_post_cnt : 551
+total_neg_cnt : 632
+TIME : 0.005678653717041016
+update the number of positive samples
+total_post_cnt : 552
+total_neg_cnt : 632
+TIME : 0.004932880401611328
+update the number of positive samples
+total_post_cnt : 553
+total_neg_cnt : 632
+TIME : 0.005276918411254883
+update the number of positive samples
+total_post_cnt : 554
+total_neg_cnt : 632
+TIME : 0.006085395812988281
+update the number of positive samples
+total_post_cnt : 555
+total_neg_cnt : 632
+TIME : 0.005652904510498047
+update the number of positive samples
+total_post_cnt : 556
+total_neg_cnt : 632
+TIME : 0.005287647247314453
+update the number of positive samples
+total_post_cnt : 557
+total_neg_cnt : 632
+TIME : 0.005376577377319336
+update the number of positive samples
+total_post_cnt : 558
+total_neg_cnt : 632
+TIME : 0.00498652458190918
+update the number of positive samples
+total_post_cnt : 559
+total_neg_cnt : 632
+TIME : 0.004958391189575195
+update the number of positive samples
+total_post_cnt : 560
+total_neg_cnt : 632
+TIME : 0.0050160884857177734
+update the number of positive samples
+total_post_cnt : 561
+total_neg_cnt : 632
+TIME : 0.005242824554443359
+update the number of positive samples
+total_post_cnt : 562
+total_neg_cnt : 632
+TIME : 0.005189657211303711
+update the number of positive samples
+total_post_cnt : 563
+total_neg_cnt : 632
+TIME : 0.005109310150146484
+update the number of positive samples
+total_post_cnt : 564
+total_neg_cnt : 632
+TIME : 0.003396749496459961
+update the number of positive samples
+total_post_cnt : 565
+total_neg_cnt : 632
+TIME : 0.0033142566680908203
+update the number of positive samples
+total_post_cnt : 566
+total_neg_cnt : 632
+TIME : 0.0032215118408203125
+update the number of positive samples
+total_post_cnt : 567
+total_neg_cnt : 632
+TIME : 0.003385305404663086
+update the number of positive samples
+total_post_cnt : 568
+total_neg_cnt : 632
+TIME : 0.003370046615600586
+update the number of positive samples
+total_post_cnt : 569
+total_neg_cnt : 632
+TIME : 0.003283262252807617
+update the number of positive samples
+total_post_cnt : 570
+total_neg_cnt : 632
+TIME : 0.003295421600341797
+update the number of positive samples
+total_post_cnt : 571
+total_neg_cnt : 632
+TIME : 0.003393411636352539
+update the number of positive samples
+total_post_cnt : 572
+total_neg_cnt : 632
+TIME : 0.003579378128051758
+update the number of positive samples
+total_post_cnt : 573
+total_neg_cnt : 632
+TIME : 0.005207538604736328
+update the number of positive samples
+total_post_cnt : 574
+total_neg_cnt : 632
+TIME : 0.0052335262298583984
+update the number of positive samples
+total_post_cnt : 575
+total_neg_cnt : 632
+TIME : 0.005448341369628906
+update the number of positive samples
+total_post_cnt : 576
+total_neg_cnt : 632
+TIME : 0.005229949951171875
+update the number of positive samples
+total_post_cnt : 577
+total_neg_cnt : 632
+TIME : 0.00530552864074707
+update the number of positive samples
+total_post_cnt : 578
+total_neg_cnt : 632
+TIME : 0.005187511444091797
+update the number of positive samples
+total_post_cnt : 579
+total_neg_cnt : 632
+TIME : 0.005234479904174805
+update the number of positive samples
+total_post_cnt : 580
+total_neg_cnt : 632
+TIME : 0.005147695541381836
+update the number of positive samples
+total_post_cnt : 581
+total_neg_cnt : 632
+TIME : 0.0051708221435546875
+update the number of positive samples
+total_post_cnt : 582
+total_neg_cnt : 632
+TIME : 0.0051648616790771484
+update the number of positive samples
+total_post_cnt : 583
+total_neg_cnt : 632
+TIME : 0.005156993865966797
+update the number of positive samples
+total_post_cnt : 584
+total_neg_cnt : 632
+TIME : 0.005244255065917969
+update the number of positive samples
+total_post_cnt : 585
+total_neg_cnt : 632
+TIME : 0.0052356719970703125
+update the number of positive samples
+total_post_cnt : 586
+total_neg_cnt : 632
+TIME : 0.005125284194946289
+update the number of positive samples
+total_post_cnt : 587
+total_neg_cnt : 632
+TIME : 0.005139827728271484
+update the number of positive samples
+total_post_cnt : 588
+total_neg_cnt : 632
+TIME : 0.005129337310791016
+update the number of positive samples
+total_post_cnt : 589
+total_neg_cnt : 632
+TIME : 0.005165576934814453
+update the number of positive samples
+total_post_cnt : 590
+total_neg_cnt : 632
+TIME : 0.005616188049316406
+update the number of positive samples
+total_post_cnt : 591
+total_neg_cnt : 632
+TIME : 0.005221128463745117
+update the number of positive samples
+total_post_cnt : 592
+total_neg_cnt : 632
+TIME : 0.0051157474517822266
+update the number of positive samples
+total_post_cnt : 593
+total_neg_cnt : 632
+TIME : 0.0035293102264404297
+update the number of positive samples
+total_post_cnt : 594
+total_neg_cnt : 632
+TIME : 0.0032806396484375
+update the number of positive samples
+total_post_cnt : 595
+total_neg_cnt : 632
+TIME : 0.0032291412353515625
+update the number of positive samples
+total_post_cnt : 596
+total_neg_cnt : 632
+TIME : 0.0033042430877685547
+update the number of positive samples
+total_post_cnt : 597
+total_neg_cnt : 632
+TIME : 0.004092693328857422
+update the number of positive samples
+total_post_cnt : 598
+total_neg_cnt : 632
+TIME : 0.005194425582885742
+update the number of positive samples
+total_post_cnt : 599
+total_neg_cnt : 632
+TIME : 0.005179166793823242
+update the number of positive samples
+total_post_cnt : 600
+total_neg_cnt : 632
+TIME : 0.004491567611694336
+update the number of positive samples
+total_post_cnt : 601
+total_neg_cnt : 632
+TIME : 0.003164529800415039
+update the number of positive samples
+total_post_cnt : 602
+total_neg_cnt : 632
+TIME : 0.0032739639282226562
+update the number of positive samples
+total_post_cnt : 603
+total_neg_cnt : 632
+TIME : 0.0033524036407470703
+update the number of positive samples
+total_post_cnt : 604
+total_neg_cnt : 632
+TIME : 0.0032231807708740234
+update the number of positive samples
+total_post_cnt : 605
+total_neg_cnt : 632
+TIME : 0.005065202713012695
+update the number of positive samples
+total_post_cnt : 606
+total_neg_cnt : 632
+TIME : 0.005202293395996094
+update the number of positive samples
+total_post_cnt : 607
+total_neg_cnt : 632
+TIME : 0.005143642425537109
+update the number of positive samples
+total_post_cnt : 608
+total_neg_cnt : 632
+TIME : 0.005192756652832031
+update the number of positive samples
+total_post_cnt : 609
+total_neg_cnt : 632
+TIME : 0.005179166793823242
+update the number of positive samples
+total_post_cnt : 610
+total_neg_cnt : 632
+TIME : 0.00526738166809082
+update the number of positive samples
+total_post_cnt : 611
+total_neg_cnt : 632
+TIME : 0.005159139633178711
+update the number of positive samples
+total_post_cnt : 612
+total_neg_cnt : 632
+TIME : 0.005103349685668945
+update the number of positive samples
+total_post_cnt : 613
+total_neg_cnt : 632
+TIME : 0.005272626876831055
+update the number of positive samples
+total_post_cnt : 614
+total_neg_cnt : 632
+TIME : 0.005257368087768555
+update the number of positive samples
+total_post_cnt : 615
+total_neg_cnt : 632
+TIME : 0.005257368087768555
+update the number of positive samples
+total_post_cnt : 616
+total_neg_cnt : 632
+TIME : 0.0051267147064208984
+update the number of positive samples
+total_post_cnt : 617
+total_neg_cnt : 632
+TIME : 0.0051727294921875
+update the number of positive samples
+total_post_cnt : 618
+total_neg_cnt : 632
+TIME : 0.005167961120605469
+update the number of positive samples
+total_post_cnt : 619
+total_neg_cnt : 632
+TIME : 0.005308866500854492
+update the number of positive samples
+total_post_cnt : 620
+total_neg_cnt : 632
+TIME : 0.0051534175872802734
+update the number of positive samples
+total_post_cnt : 621
+total_neg_cnt : 632
+TIME : 0.005154609680175781
+update the number of positive samples
+total_post_cnt : 622
+total_neg_cnt : 632
+TIME : 0.0053598880767822266
+update the number of positive samples
+total_post_cnt : 623
+total_neg_cnt : 632
+TIME : 0.005163669586181641
+update the number of positive samples
+total_post_cnt : 624
+total_neg_cnt : 632
+TIME : 0.0051457881927490234
+update the number of positive samples
+total_post_cnt : 625
+total_neg_cnt : 632
+TIME : 0.0053102970123291016
+update the number of positive samples
+total_post_cnt : 626
+total_neg_cnt : 632
+TIME : 0.0053026676177978516
+update the number of positive samples
+total_post_cnt : 627
+total_neg_cnt : 632
+TIME : 0.005198240280151367
+update the number of positive samples
+total_post_cnt : 628
+total_neg_cnt : 632
+TIME : 0.005414009094238281
+update the number of positive samples
+total_post_cnt : 629
+total_neg_cnt : 632
+TIME : 0.005128383636474609
+update the number of positive samples
+total_post_cnt : 630
+total_neg_cnt : 632
+TIME : 0.005110263824462891
+update the number of positive samples
+total_post_cnt : 631
+total_neg_cnt : 632
+TIME : 0.005103588104248047
+update the number of positive samples
+total_post_cnt : 632
+total_neg_cnt : 632
+TIME : 0.005171060562133789
+============ RF ============
+Accuracy :  0.7694
+Precision :  0.6232
+Recall :  0.5029
+f1-score :  0.5566
+g_mean :  0.6641
+auc :  0.69
+============ LGBM ============
+[LightGBM] [Info] Number of positive: 258, number of negative: 632
+[LightGBM] [Info] Total Bins 307
+[LightGBM] [Info] Number of data points in the train set: 890, number of used features: 6
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.289888 -> initscore=-0.895930
+[LightGBM] [Info] Start training from score -0.895930
+Accuracy :  0.7912
+Precision :  0.7374
+Recall :  0.4269
+f1-score :  0.5407
+g_mean :  0.633
+auc :  0.6827
+============ RF with SMOTE ============
+Accuracy :  0.7677
+Precision :  0.5864
+Recall :  0.655
+f1-score :  0.6188
+g_mean :  0.7298
+auc :  0.7341
+============ LGBM with SMOTE ============
+[LightGBM] [Info] Number of positive: 632, number of negative: 632
+[LightGBM] [Info] Total Bins 1477
+[LightGBM] [Info] Number of data points in the train set: 1264, number of used features: 6
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+Accuracy :  0.7559
+Precision :  0.5575
+Recall :  0.7368
+f1-score :  0.6347
+g_mean :  0.7501
+auc :  0.7502
+============ LGBM with GAN ============
+[LightGBM] [Info] Number of positive: 632, number of negative: 632
+[LightGBM] [Info] Total Bins 1750
+[LightGBM] [Info] Number of data points in the train set: 1264, number of used features: 8
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+Accuracy :  0.798
+Precision :  0.6917
+Recall :  0.538
+f1-score :  0.6052
+g_mean :  0.697
+auc :  0.7205
+[LightGBM] [Info] Number of positive: 632, number of negative: 632
+[LightGBM] [Info] Total Bins 1752
+[LightGBM] [Info] Number of data points in the train set: 1264, number of used features: 8
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+Accuracy :  0.7845
+Precision :  0.6807
+Recall :  0.4737
+f1-score :  0.5586
+g_mean :  0.6566
+auc :  0.6919
+[LightGBM] [Info] Number of positive: 632, number of negative: 632
+[LightGBM] [Info] Total Bins 1636
+[LightGBM] [Info] Number of data points in the train set: 1264, number of used features: 8
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+Accuracy :  0.7896
+Precision :  0.6797
+Recall :  0.5088
+f1-score :  0.582
+g_mean :  0.6779
+auc :  0.7059
+============ LGBM with SNGANs ============
+[LightGBM] [Info] Number of positive: 632, number of negative: 632
+[LightGBM] [Info] Total Bins 1746
+[LightGBM] [Info] Number of data points in the train set: 1264, number of used features: 8
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+Accuracy :  0.7929
+Precision :  0.6875
+Recall :  0.5146
+f1-score :  0.5886
+g_mean :  0.6826
+auc :  0.71
+============ RF with GAN ============
+Accuracy :  0.7896
+Precision :  0.6691
+Recall :  0.5322
+f1-score :  0.5928
+g_mean :  0.6896
+auc :  0.7129
+============ RF with WGAN ============
+Accuracy :  0.7593
+Precision :  0.6111
+Recall :  0.4503
+f1-score :  0.5185
+g_mean :  0.631
+auc :  0.6672
+============ RF with WGANGP ============
+Accuracy :  0.7761
+Precision :  0.661
+Recall :  0.4561
+f1-score :  0.5398
+g_mean :  0.6426
+auc :  0.6808
+============ RF with SNGANs ============
+Accuracy :  0.766
+Precision :  0.6212
+Recall :  0.4795
+f1-score :  0.5412
+g_mean :  0.6502
+auc :  0.6807
+============ RF with JUNGAN ============
+Accuracy :  0.7677
+Precision :  0.626
+Recall :  0.4795
+f1-score :  0.543
+g_mean :  0.6511
+auc :  0.6818
+============ LGBM with JUNGAN ============
+[LightGBM] [Info] Number of positive: 632, number of negative: 632
+[LightGBM] [Info] Total Bins 1754
+[LightGBM] [Info] Number of data points in the train set: 1264, number of used features: 8
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+Accuracy :  0.7929
+Precision :  0.6875
+Recall :  0.5146
+f1-score :  0.5886
+g_mean :  0.6826
+auc :  0.71

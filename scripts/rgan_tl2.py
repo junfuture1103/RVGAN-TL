@@ -3,6 +3,7 @@ import os
 import pickle
 import glob
 
+from datetime import datetime
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 import src
@@ -16,18 +17,24 @@ directory = '../data/testarff/'
 arff_files = glob.glob(os.path.join(directory, '*.arff'))
 
 if __name__ == '__main__':
-
+    current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
+    print('start ', current_time)
+    # 2. 디렉터리 생성
+    directory_name = f'test_{current_time}'
+    os.makedirs(directory_name, exist_ok=True)
+    
     for arff_file in arff_files:
         
         file_name = os.path.basename(arff_file)
 
         # 확장자 제거
         file_name_without_ext = os.path.splitext(file_name)[0]
-        sys.stdout = open('stdout_traditional_{}.txt'.format(file_name_without_ext), 'w')
-
+        # sys.stdout = open('stdout_traditional_{}.txt'.format(file_name_without_ext), 'w')
+        sys.stdout = open(f'{directory_name}/stdout_traditional_{file_name_without_ext}.txt', 'w')
 
         print('Started testing RGAN-TL Classifier : '+ arff_file)
         src.utils.set_random_state()
+
         # src.utils.prepare_dataset(FILE_NAME)
         src.utils.prepare_arff_dataset(arff_file)
         
@@ -62,7 +69,8 @@ if __name__ == '__main__':
         src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
         
         sys.stdout.close()
-        sys.stdout = open('stdout_gan_{}.txt'.format(file_name_without_ext), 'w')
+        # sys.stdout = open('stdout_gan_{}.txt'.format(file_name_without_ext), 'w')
+        sys.stdout = open(f'{directory_name}/stdout_gan_{file_name_without_ext}.txt', 'w')
 
         sngan_dataset = src.utils.get_gan_dataset(src.gans.SNGAN())
         gan_dataset = src.utils.get_gan_dataset(src.gans.GAN())
