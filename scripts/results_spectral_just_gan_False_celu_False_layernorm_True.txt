@@ -1,0 +1,35 @@
+Running RandomForest and LGBM for configuration 7/8:
+=============================================
+============ RF with GAN ============
+Accuracy :  0.9037
+Precision :  0.75
+Recall :  0.3529
+f1-score :  0.48
+g_mean :  0.589
+auc :  0.668
+============ LGBM with JUNGAN ============
+[LightGBM] [Info] Number of positive: 183, number of negative: 183
+[LightGBM] [Info] Total Bins 594
+[LightGBM] [Info] Number of data points in the train set: 366, number of used features: 7
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Accuracy :  0.8963
+Precision :  0.6
+Recall :  0.5294
+f1-score :  0.5625
+g_mean :  0.7089
+auc :  0.7393

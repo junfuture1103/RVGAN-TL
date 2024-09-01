@@ -40,16 +40,18 @@ def preprocess_data(file_name):
     file_path = src.config.path.datasets / file_name
     df = pd.read_csv(file_path)
     new_df = df
-    # USING FOR TEST
+    # # USING FOR TEST
 
-    print('Distribution of the Classes in the subsample dataset')
+    # print('Distribution of the Classes in the subsample dataset')
     
     print(new_df['Class'].value_counts())
     print(new_df['Class'].value_counts()/len(new_df))
 
 
     new_df = src.sample.sampling(df, 5000)
-    new_df.columns
+    # new_df.columns
+    # # USING FOR TEST
+
     df = new_df
     
     # src.utils.set_random_state()
@@ -58,7 +60,7 @@ def preprocess_data(file_name):
     # #random sampling
     df = df.sample(frac=1)
 
-    samples = df.loc[:, 'V1' : 'Amount']
+    samples = df.loc[:, 'V1' : 'Class']
     labels = df.loc[:, 'Class']
 
     # normalize samples -> min : 0 max : 1

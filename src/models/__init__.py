@@ -16,6 +16,7 @@ from .vae_e_model import VAEEModel
 from .vae_d_model import VAEDModel
 
 from .jungan_d_model import FDGANDModel
+from .jungan_d_model import FDGAND_ABLTEST_Model
 from .junganc_d_model import FDGANCDModel
 from .jungans_d_model import FDGANSDModel
 

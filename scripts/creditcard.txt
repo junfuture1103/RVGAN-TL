@@ -1,0 +1,37 @@
+Started testing RGAN-TL Classifier
+Class
+0    284315
+1       492
+Name: count, dtype: int64
+Class
+0    0.998273
+1    0.001727
+Name: count, dtype: float64
+df_len :  284807
+        Time        V1        V2        V3  ...       V27       V28  Amount  Class
+4073  3733.0  1.326932 -0.393447  0.824760  ... -0.020655  0.025341   39.80      0
+199    132.0 -0.394816  1.054418  1.206361  ...  0.287360  0.111322    3.87      0
+2517  2090.0 -0.380761  0.765901  1.251706  ...  0.243324 -0.009046    1.00      0
+610    460.0 -2.400261 -1.383754  1.610151  ...  0.123830  0.485189   79.00      0
+4515  3827.0  0.755792 -1.356122  0.717366  ...  0.026492  0.075376  265.42      0
+
+[5 rows x 31 columns]
+Distribution of the Classes in the subsample dataset
+Class
+0    5000
+1     492
+Name: count, dtype: int64
+Class
+0    0.910415
+1    0.089585
+Name: count, dtype: float64
+============ START IForest ============
+============ DONE IForest ============
+============ START LSHIForest ============
+Accuracy :  0.9331
+Precision :  0.9796
+Recall :  0.2474
+f1-score :  0.395
+g_mean :  0.4973
+auc :  0.6235
+============ DONE LSHIForest ============

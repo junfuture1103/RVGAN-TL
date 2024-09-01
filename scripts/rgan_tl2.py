@@ -24,6 +24,7 @@ if __name__ == '__main__':
     os.makedirs(directory_name, exist_ok=True)
     
     for arff_file in arff_files:
+        # print('now processing : ', arff_file)
         
         file_name = os.path.basename(arff_file)
 
@@ -50,24 +51,29 @@ if __name__ == '__main__':
         print("============ DONE SMOTE ============")
         src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
         
-        print("============ START SMOTE ============")
+        print("============ START ADASYN ============")
         ada = ADASYN(random_state=42)
         X_train_resampled, Y_train_resampled = ada.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
-        print("============ DONE SMOTE ============")
+        print("============ DONE ADASYN ============")
         src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
         
-        print("============ START SMOTE ============")
+        print("============ START ROS ============")
         ros = RandomOverSampler(random_state=42)
         X_train_resampled, Y_train_resampled = ros.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
-        print("============ DONE SMOTE ============")
+        print("============ DONE ROS ============")
         src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
         
-        print("============ START SMOTE ============")
+        print("============ START BorderlineSMOTE ============")
         ros = BorderlineSMOTE(random_state=42)
         X_train_resampled, Y_train_resampled = ros.fit_resample(src.datasets.training_samples, src.datasets.training_labels)
-        print("============ DONE SMOTE ============")
+        print("============ DONE BorderlineSMOTE ============")
         src.jun_classifier.LGBM(X_train_resampled, Y_train_resampled, src.datasets.test_samples, src.datasets.test_labels)
         
+        print("============ START IForest ============")
+        src.jun_classifier.IForest(src.datasets.training_samples, src.datasets.training_labels, src.datasets.test_samples, src.datasets.test_labels)
+        
+        print("============ DONE IForest ============")
+
         sys.stdout.close()
         # sys.stdout = open('stdout_gan_{}.txt'.format(file_name_without_ext), 'w')
         sys.stdout = open(f'{directory_name}/stdout_gan_{file_name_without_ext}.txt', 'w')

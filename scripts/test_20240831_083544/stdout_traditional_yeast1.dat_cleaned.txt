@@ -1,0 +1,98 @@
+Started testing RGAN-TL Classifier : ../data/testarff/yeast1.dat_cleaned.arff
+====== arff datasets ======
+[[0.53932583 0.5402299  0.35443038 ... 0.         0.72602737 0.31      ]
+ [0.38202247 0.49425286 0.37974685 ... 0.         0.73972607 0.22      ]
+ [0.5168539  0.42528737 0.24050635 ... 0.         0.6438356  0.22      ]
+ ...
+ [0.38202247 0.45977008 0.37974685 ... 0.         0.71232873 0.22      ]
+ [0.33707863 0.3678161  0.31645572 ... 0.         0.6849315  0.7       ]
+ [0.494382   0.31034482 0.51898736 ... 0.         0.50684935 0.28      ]]
+123     0
+432     0
+1033    0
+529     1
+1417    0
+       ..
+1130    0
+1294    0
+860     0
+1459    0
+1126    1
+Name: Class, Length: 1484, dtype: int64
+============ LGBM ============
+[LightGBM] [Info] Number of positive: 258, number of negative: 632
+[LightGBM] [Info] Total Bins 307
+[LightGBM] [Info] Number of data points in the train set: 890, number of used features: 6
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.289888 -> initscore=-0.895930
+[LightGBM] [Info] Start training from score -0.895930
+Accuracy :  0.7912
+Precision :  0.7374
+Recall :  0.4269
+f1-score :  0.5407
+g_mean :  0.633
+auc :  0.6827
+============ START SMOTE ============
+============ DONE SMOTE ============
+[LightGBM] [Info] Number of positive: 632, number of negative: 632
+[LightGBM] [Info] Total Bins 1483
+[LightGBM] [Info] Number of data points in the train set: 1264, number of used features: 6
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+Accuracy :  0.7525
+Precision :  0.5561
+Recall :  0.6959
+f1-score :  0.6182
+g_mean :  0.7346
+auc :  0.7357
+============ START ADASYN ============
+============ DONE ADASYN ============
+[LightGBM] [Info] Number of positive: 683, number of negative: 632
+[LightGBM] [Info] Total Bins 1476
+[LightGBM] [Info] Number of data points in the train set: 1315, number of used features: 6
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.519392 -> initscore=0.077605
+[LightGBM] [Info] Start training from score 0.077605
+Accuracy :  0.7424
+Precision :  0.5381
+Recall :  0.7427
+f1-score :  0.6241
+g_mean :  0.7425
+auc :  0.7425
+============ START ROS ============
+============ DONE ROS ============
+[LightGBM] [Info] Number of positive: 632, number of negative: 632
+[LightGBM] [Info] Total Bins 318
+[LightGBM] [Info] Number of data points in the train set: 1264, number of used features: 6
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+Accuracy :  0.7492
+Precision :  0.5505
+Recall :  0.7018
+f1-score :  0.617
+g_mean :  0.7343
+auc :  0.735
+============ START BorderlineSMOTE ============
+============ DONE BorderlineSMOTE ============
+[LightGBM] [Info] Number of positive: 632, number of negative: 632
+[LightGBM] [Info] Total Bins 1477
+[LightGBM] [Info] Number of data points in the train set: 1264, number of used features: 6
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+Accuracy :  0.7559
+Precision :  0.5575
+Recall :  0.7368
+f1-score :  0.6347
+g_mean :  0.7501
+auc :  0.7502
+============ START IForest ============
+Accuracy :  0.6785
+Precision :  0.3387
+Recall :  0.1228
+f1-score :  0.1802
+g_mean :  0.333
+auc :  0.5129
+============ DONE IForest ============
+============ START IForest ============
+Accuracy :  0.2879
+Precision :  0.2879
+Recall :  1.0
+f1-score :  0.4471
+g_mean :  0.0
+auc :  0.5
+============ DONE IForest ============

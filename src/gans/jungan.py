@@ -2,14 +2,15 @@ import torch
 
 import src
 from src import config, models
-from src.models import SNGANGModel, FDGANDModel
+from src.models import SNGANGModel, FDGANDModel, FDGAND_ABLTEST_Model
 from src.datasets import PositiveDataset, RoulettePositiveDataset
 from ._base import Base
 
-
 class JUNGAN(Base):
-    def __init__(self):
-        super().__init__(SNGANGModel(), FDGANDModel())
+    def __init__(self, ablation_config=None):
+        # ablation_config를 통해 모델의 구성 요소를 조정할 수 있도록 함
+        fdgand_model = FDGAND_ABLTEST_Model(ablation_config=ablation_config)
+        super().__init__(SNGANGModel(), fdgand_model)
 
     def _fit(self):
         d_optimizer = torch.optim.Adam(

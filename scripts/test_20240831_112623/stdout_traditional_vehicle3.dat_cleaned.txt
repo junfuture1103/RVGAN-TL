@@ -1,0 +1,164 @@
+Started testing RGAN-TL Classifier : ../data/testarff/vehicle3.dat_cleaned.arff
+====== arff datasets ======
+[[0.17391312 0.46153843 0.3888889  ... 0.         0.23333359 0.2666664 ]
+ [0.478261   0.19230771 0.3611111  ... 0.19512194 0.2666669  0.0666666 ]
+ [0.36956525 0.34615386 0.31944442 ... 0.36585364 0.13333368 0.0999999 ]
+ ...
+ [0.19565225 0.46153843 0.3888889  ... 0.         0.16666698 0.0999999 ]
+ [0.26086962 0.15384614 0.3888889  ... 0.3414634  0.6333337  0.7333331 ]
+ [0.45652175 0.34615386 0.3888889  ... 0.12195121 0.5333338  0.5       ]]
+39     0
+250    0
+314    0
+96     0
+198    0
+      ..
+71     1
+106    1
+270    0
+435    0
+102    0
+Name: Class, Length: 846, dtype: int64
+============ LGBM ============
+[LightGBM] [Info] Number of positive: 136, number of negative: 371
+[LightGBM] [Info] Total Bins 958
+[LightGBM] [Info] Number of data points in the train set: 507, number of used features: 18
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.268245 -> initscore=-1.003547
+[LightGBM] [Info] Start training from score -1.003547
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Accuracy :  0.8024
+Precision :  0.6
+Recall :  0.3553
+f1-score :  0.4463
+g_mean :  0.5753
+auc :  0.6434
+============ START SMOTE ============
+============ DONE SMOTE ============
+[LightGBM] [Info] Number of positive: 371, number of negative: 371
+[LightGBM] [Info] Total Bins 2776
+[LightGBM] [Info] Number of data points in the train set: 742, number of used features: 18
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Accuracy :  0.7876
+Precision :  0.5233
+Recall :  0.5921
+f1-score :  0.5556
+g_mean :  0.707
+auc :  0.7181
+============ START ADASYN ============
+============ DONE ADASYN ============
+[LightGBM] [Info] Number of positive: 377, number of negative: 371
+[LightGBM] [Info] Total Bins 2971
+[LightGBM] [Info] Number of data points in the train set: 748, number of used features: 18
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.504011 -> initscore=0.016043
+[LightGBM] [Info] Start training from score 0.016043
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Accuracy :  0.7699
+Precision :  0.49
+Recall :  0.6447
+f1-score :  0.5568
+g_mean :  0.7209
+auc :  0.7254
+============ START ROS ============
+============ DONE ROS ============
+[LightGBM] [Info] Number of positive: 371, number of negative: 371
+[LightGBM] [Info] Total Bins 1062
+[LightGBM] [Info] Number of data points in the train set: 742, number of used features: 18
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Accuracy :  0.7965
+Precision :  0.5347
+Recall :  0.7105
+f1-score :  0.6102
+g_mean :  0.7639
+auc :  0.7659
+============ START BorderlineSMOTE ============
+============ DONE BorderlineSMOTE ============
+[LightGBM] [Info] Number of positive: 371, number of negative: 371
+[LightGBM] [Info] Total Bins 2928
+[LightGBM] [Info] Number of data points in the train set: 742, number of used features: 18
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Accuracy :  0.7935
+Precision :  0.5326
+Recall :  0.6447
+f1-score :  0.5833
+g_mean :  0.7344
+auc :  0.7406
+============ START IForest ============
+Accuracy :  0.7109
+Precision :  0.1944
+Recall :  0.0921
+f1-score :  0.125
+g_mean :  0.2863
+auc :  0.4909
+============ DONE IForest ============
+============ START LSHIForest ============
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Accuracy :  0.2242
+Precision :  0.2242
+Recall :  1.0
+f1-score :  0.3663
+g_mean :  0.0
+auc :  0.5
+============ DONE LSHIForest ============

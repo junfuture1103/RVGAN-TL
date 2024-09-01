@@ -1,6 +1,7 @@
 from . import (
     config,
     datasets,
+    detectors,
     gans,
     models,
     classifier,
